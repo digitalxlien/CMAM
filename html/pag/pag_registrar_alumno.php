@@ -34,13 +34,59 @@
 				
 				<div id="div_frm_registro">
 					<form action="" name="frm_login">
-						<label class="label_frm">Datos personales del alumno:</label>
-						<br /><hr /><br />
+						
+						
+						<label class="label_frm">Datos de nuevo ingreso: </label>
+						<br /><hr />
+						
+						
+						<label class="label_frm">Nivel: </label>
+						<select class="input_frm" name="nivel" id="nivel" style="width: 180px;">
+							<option value="S">Secundaria</option> 
+							<option value="B">Bachillerato</option>
+						</select>
+						
+						<span class="espacio_horizontal_30px"></span>
+						
+																	
+						<label class="label_frm">Grado: </label>
+						<select class="input_frm" name="grado" id="grado" style="width: 190px;">
+							<option value="1">1° - Primero</option> 
+							<option value="2">2° - Segundo</option>
+							<option value="3">3° - Tercero</option>
+							<option value="4">4° - Cuarto</option>
+							<option value="5">5° - Quinto</option>
+							<option value="6">6° - Sexto</option>
+						</select>
+						
+						<span class="espacio_horizontal_30px"></span>
+						
+						<label class="label_frm">Grupo: </label>
+						<select class="input_frm" name="grupo" id="grupo" style="width: 70px;">
+							<option value="01">A</option> 
+							<option value="02">B</option>
+							<option value="03">C</option>
+						</select>
+												
+						<br />
 						
 						<!-- Número de control -->
-						<label class="label_frm" name="id_alumno">Número de control: #######<!-- INSERTAR CODIGO QUE GENERE EL CAMPO LLAVE --> </label>
+						<label class="label_frm" onclick="" />Número de control:</label>
 						
-						<br />
+						<input name="id_alumno" id="id_alumno" type="text" class="input_frm" readonly="readonly">
+						
+						<br /><br />
+						
+						
+						<input name="btn_generar_numero_control" class="btn_frm_aceptar" type="button" value="Generar número de control" onclick="generar_numero_control_alumno(document.getElementById('nivel').value, document.getElementById('grupo').value)">
+						
+						<input name="btn_introducir_numero_control" class="btn_frm_aceptar" type="button" value="Generar número de control" onclick="introducir_numero_control_alumno(document.getElementById('id_alumno').value)">
+						
+						
+						<br /><br />
+						
+						<label class="label_frm">Datos principales: </label>
+						<br /><hr />
 
 						
 						<label class="label_frm" >Apellido paterno: </label>
@@ -59,29 +105,20 @@
 						<span class="espacio_horizontal_30px "></span>
 											
 						<label class="label_frm" >Sexo: </label>
-						<select class="input_frm" name="sexo">
+						<select class="input_frm" name="sexo" style="width: 150px;">
 							<option value="H">Hombre</option> 
 							<option value="M">Mujer</option>
 						</select>
 						
-						<span class="espacio_horizontal_30px "></span>
-												
-						<label class="label_frm" >Grado: </label>
-						<select class="input_frm" name="grado">
-							<option value="1">1° - Primero</option> 
-							<option value="2">2° - Segundo</option>
-							<option value="3">3° - Tercero</option>
-							<option value="4">4° - Cuarto</option>
-							<option value="5">5° - Quinto</option>
-							<option value="6">6° - Sexto</option>
-						</select>
+						
 						
 						<br /><br />
 						
 						<!-- FALTA INVESTIGAR ENTRADA DE FECHA -->
 						<label class="label_frm" >Fecha de nacimiento: </label>
-						<input type="month" class="input_frm">
 						
+						<!-- Retorna una fecha con formta YYYY/MM/DD -->
+						<input type="date" name="fecha_nacimiento" min="1950-01-01" value="2000-01-01" class="input_frm">
 						<span class="espacio_horizontal_30px "></span>
 						
 						<label class="label_frm" >Domicilio: </label>
@@ -117,15 +154,7 @@
 						
 						<br /><br /><br />
 
-
-
-
-
-
-
-
-
-						
+					
 						
 						<input class="btn_frm_aceptar" type="submit" name="btn_login" value="Iniciar sesión">
 					</form>

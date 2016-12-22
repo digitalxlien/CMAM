@@ -159,7 +159,7 @@ form hr {
 .label_frm {
 	color: #fff;
 	font-family: arial_regular, arial_regular_bold;
-	font-size: 20px;
+	font-size: 18px;
 	position: relative;
 }
 
@@ -168,7 +168,11 @@ form hr {
 	height: 30px;
 	font-family: arial_regular, arial_regular_bold;
 	font-size: 20px;
+	border-radius: 5px;
 }
+
+
+
 
 .input_frm_login {
 	width: 300px;
@@ -196,7 +200,7 @@ form hr {
 .espacio_horizontal_30px {
 	border:0px solid red;
 	padding: 0px 16px 0px 16px;
-	border: 1px solid red;
+	border: 0px solid red;
 }
  
  
