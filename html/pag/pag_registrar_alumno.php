@@ -33,7 +33,7 @@
 				<h1>Registrar alumno:</h1>
 				
 				<div id="div_frm_registro">
-					<form action="" name="frm_login">
+					<form  method="post" action="../../php/alumno-query.php" name="frm_login">
 						
 						
 						

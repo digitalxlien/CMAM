@@ -8,14 +8,14 @@
 	
 	/*Variables que obtienen los datos del formulario*/
 	$id_alumno = $_REQUEST['id_alumno'];
-	$apellido_paterno = $_REQUEST['apelido_paterno'];
+	$apellido_paterno = $_REQUEST['apellido_paterno'];
 	$apellido_materno = $_REQUEST['apellido_materno'];
 	$nombre = $_REQUEST['nombre'];
 	$sexo = $_REQUEST['sexo'];
 	$grado = $_REQUEST['grado'];
-	$horas_arresto = $_REQUEST['horas_arresto'];
-	$puntos_demerito = $_REQUEST['puntos_demerito'];
-	$fecha_ingreso = $_REQUEST['fecha_ingreso'];//La fecha debe estar en formato YYYY/MM/DD
+	$horas_arresto=0; //= $_REQUEST['horas_arresto'];
+	$puntos_demerito = 0;// = $_REQUEST['puntos_demerito'];
+	$fecha_ingreso ="2016/12/23";// $_REQUEST['fecha_ingreso'];//La fecha debe estar en formato YYYY/MM/DD
 	$fecha_nacimiento = $_REQUEST['fecha_nacimiento'];//La fecha debe estar en formato YYYY/MM/DD
 	$domicilio = $_REQUEST['domicilio'];
 	$colonia = $_REQUEST['colonia'];
@@ -27,44 +27,43 @@
 	$email = $_REQUEST['email'];
 	$estatura = $_REQUEST['estatura'];
 	$peso = $_REQUEST['peso'];
-	$alergia = $_REQUEST['alergia'];
+	$alergia ="NINGUNA";// $_REQUEST['alergia'];
 	$tipo_sangre = $_REQUEST['tipo_sangre'];
-	$estatus = $_REQUEST['estatus'];
-	$foto = $_REQUEST['foto'];
-	$rango = $_REQUEST['rango'];
-	$modalidad = $_REQUEST['modalidad'];
+	$estatus = "ACTIVO";//$_REQUEST['estatus'];
+	$foto = "NO";//$_REQUEST['foto'];
+	$rango = "SIN ESPECIFICAR";//$_REQUEST['rango'];
+	$modalidad = "NO SE";//$_REQUEST['modalidad'];
 	
 	/*Sentencia SQL*/
 	$query = 	
-	"INSERT INTO 'tbl_alumno'
+	"INSERT INTO `tbl_alumno`
 	(
-		'id_alumno',
-		'apellido_paterno',
-		'apellido_materno',
-		'nombre', 
-		'sexo',
-		'grado',
-		'horas_arresto,
-		'puntos_demerito',
-		'fecha_ingreso',
-		'fecha_nacimiento',
-		'domicilio',
-		'colonia',
-		'ciudad',
-		'estado',
-		'codigo_postal',
-		'numero_telefono',
-		'numero_celular',
-		'email',
-		'estatura',
-		'peso',
-		'alergia',
-		'tipo_sangre',
-		'estatus',
-		'foto',
-		'rango',
-		'modalidad
-	)
+		`id_alumno`,
+		`apellido_paterno`,
+		`apellido_materno`,
+		`nombre`, 
+		`sexo`, 
+		`grado`, 
+		`horas_arresto`, 
+		`puntos_demerito`, 
+		`fecha_ingreso`, 
+		`fecha_nacimiento`, 
+		`domicilio`, 
+		`colonia`, 
+		`ciudad`, 
+		`estado`, 
+		`codigo_postal`, 
+		`numero_telefono`, 
+		`numero_celular`, 
+		`email`, 
+		`estatura`, 
+		`peso`, 
+		`alergia`, 
+		`tipo_sangre`, 
+		`estatus`, 
+		`foto`, 
+		`rango`, 
+		`modalidad`)
 	VALUES
 	(
 		'$id_alumno',
@@ -96,8 +95,8 @@
 	) ";
 	
 	/*Se ejecuta el query*/
-	$resultado = mysqli_quer($conexion, $query)
-		or die ("No se pudo ejecutar el query " .mysql_error() );
+	$resultado = mysqli_query($conexion, $query)
+		or die ("No se pudo ejecutar el query " .mysqli_error($conexion) );
 	echo "Datos ingresados correctamente";
 	
 	/*Esta es una sentencia de prueba*/
