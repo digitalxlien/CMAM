@@ -68,15 +68,33 @@ function generar_numero_control_alumno(nivel, grupo){
 
 
 function introducir_numero_control_alumno(id_elemento){
-	
 	set_value('id_alumno', "");
 	set_readonly('id_alumno', false);	
-	
-	
-	
 }
 
 
+
+
+function generar_curp(apellido_paterno, apellido_materno, nombre, fecha_nacimiento, sexo, id_elemento){
+	
+	var curp;
+	
+	// Generar parcialmente la CURP:
+	curp = apellido_paterno.toString().charAt(0) +
+		apellido_paterno.toString().charAt(1) +
+		apellido_materno.toString().charAt(0) +
+		nombre.toString().charAt(0) +
+		fecha_nacimiento.toString().charAt(2) +
+		fecha_nacimiento.toString().charAt(3) +
+		fecha_nacimiento.toString().charAt(5) +
+		fecha_nacimiento.toString().charAt(6) +
+	 	fecha_nacimiento.toString().charAt(8) +
+	 	fecha_nacimiento.toString().charAt(9) +
+	 	sexo;	
+		
+	// Enviarla al elemento especificado 
+	set_value(id_elemento, curp.toUpperCase());
+}
 
 
 
