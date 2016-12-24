@@ -33,7 +33,7 @@
 				<h1>Registrar alumno:</h1>
 				
 				<div id="div_frm_registro">
-					<form  method="post" action="../../php/alumno-query.php" name="frm_login">
+					<form  method="post" action="../../php/alumno-query.php" name="frm_registro_alumno">
 						
 						
 						
@@ -251,26 +251,51 @@
 						
 						<br />
 						
+								
+						
+						
+						
 						<!-- FALTA AGREGAR BOTON DE FOTO -->
-						<!-- FALTA AGREGAR LIST DE RANGO -->
-						<!-- FALTA AGREGAR BOTON DE FOTO -->
-						<!-- FALTA AGREGAR LIST DE MODALIDADES -->
 						<!-- FALTA AGREGAR TEXTAREA DE ALERGIAS -->
 						
 						
-						<select class="input_frm" name="rango" id="rango" style="width: 70px;">
-							<option value="AB+">AB+</option>
-							<option value="AB-">AB-</option>
-							<option value="A+">A+</option>
-							<option value="A-">A-</option>
-							<option value="B+">B+</option>
-							<option value="B-">B-</option>
-							<option value="O+">O+</option>
-							<option value="O-">O-</option> 
+						<label class="label_frm">Rango: </label>
+						
+						<select class="input_frm" name="rango" id="rango" style="width: 170px;">
+							<option value="Cabo">Cabo</option>
+							<option value="Cadete 2do.">Cadete 2do.</option>
+							<option value="Cadete 1ro.">Cadete 1ro.</option>
+							<option value="Sargento 2do.">Sargento 2do.</option>
+							<option value="Sargento 1ro">Sargento 1ro.</option>
+							<option value="Comandate de unidad">Comandate de unidad</option>
+							<option value="Jefe de cadetes">Jefe de cadetes</option>
+							<option value="Sub-oficial">Sub-oficial</option>
+							<option value="Oficial 2do.">Oficial 2do.</option>
+							<option value="Oficial 1ro.">Oficial 1ro.</option>
+							<option value="Oficial">Oficial</option>
+							<option value="Sin rango">Sin grado</option>
+							
 						</select>
 						
+						<span class="espacio_horizontal_30px "></span>
 						
-						<br /><br /><br />
+						<label class="label_frm">Modalidad: </label>
+						
+						<select class="input_frm" name="modalidad" id="modalidad" style="width: 170px;">
+							<option value="Interno">Interno</option>
+							<option value="Externo">Externo</option>
+							<option value="Semi-interno">Semi-interno</option>
+						</select>
+						
+						<br />
+						
+						<label class="label_frm">Alergias (descripción): </label>
+						<br />
+						<textarea form="frm_registro_alumno" class="input_frm" rows="3"  maxlength="25"  style="width: 500px; height: 60px"></textarea>
+						
+											
+						
+						<br /><br />
 
 					
 						
