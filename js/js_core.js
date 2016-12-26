@@ -55,7 +55,7 @@ function generar_numero_control_alumno(nivel, grupo){
 
 	/* ****************************
 	 * 
-	 *	FALTA REALIZAR UN METODOS DONDE "NNN" SEA EL ULTIMO VALOR ENCONTRADO NO REPETIDO. 
+	 *	FALTA REALIZAR UN METODOS DONDE "NNN" SEA EL ULTIMO VALOR ENCONTRADO NO REPETIDO EN LA BASE DE DATOS. 
 	 * 
 	 */
 
@@ -76,9 +76,9 @@ function introducir_numero_control_alumno(id_elemento){
 
 
 function generar_curp(apellido_paterno, apellido_materno, nombre, fecha_nacimiento, sexo, id_elemento){
-	
+	//Este metodo genera los primeros 12 digitos aproximados de la curp.
 	var curp;
-	
+
 	// Generar parcialmente la CURP:
 	curp = apellido_paterno.toString().charAt(0) +
 		apellido_paterno.toString().charAt(1) +

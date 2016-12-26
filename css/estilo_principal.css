@@ -144,7 +144,18 @@ form hr {
 	border-radius: 15px;
 }
 
-#div_frm_registro {
+#div_frm_registrar {
+	height: auto;
+	width: auto;
+	background-color: #004a70;
+	padding: 30px;
+	margin: 50px 0px 50px 0px;
+	border-radius: 15px;
+	line-height: 40px; 
+}
+
+
+#div_frm_buscar {
 	height: auto;
 	width: auto;
 	background-color: #004a70;

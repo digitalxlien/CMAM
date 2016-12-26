@@ -30,11 +30,24 @@
 
 			<div id="div_cuerpo">	
 				<!-- Lo escencial de la pagina: -->
-				<h1>Registrar alumno:</h1>
+				<h1>Consultar alumno:</h1>
+				
+				
+				<div id="div_frm_buscar">
+				
+					<form method="post" name="frm_registrar_alumno">
+						
+						<label class="label_frm">Número de control:</label>
+						<input name="id_alumno" id="id_alumno" type="text" class="input_frm" maxlength="9" required>
+						<input name="bnt_buscar_alumno" id="btn_buscar_alumno" type="button"  class="btn_frm_aceptar" value="Buscar alumno"/>
+						
+					</form>
+					
+					
+				</div>
 				
 				<div id="div_frm_registrar">
 					<form  method="post" action="../../php/alumno-query.php" name="frm_registrar_alumno">
-						
 						
 						<!-- DATOS DE NUEVO INGRESO ----------------------------------------------------->
 						
@@ -49,7 +62,8 @@
 						</select>
 						
 						<span class="espacio_horizontal_30px"></span>
-													
+						
+																	
 						<label class="label_frm">Grado: </label>
 						<select class="input_frm" name="grado" id="grado" style="width: 190px;">
 							<option value="1">1° - Primero</option> 
@@ -78,13 +92,13 @@
 						
 						<br /><br />
 						
+						
 						<input name="btn_generar_numero_control" class="btn_frm_aceptar" type="button" value="Generar número de control" onclick="generar_numero_control_alumno(document.getElementById('nivel').value, document.getElementById('grupo').value)">
 						
 						<input name="btn_introducir_numero_control" class="btn_frm_aceptar" type="button" value="Introducir número de control" onclick="introducir_numero_control_alumno(document.getElementById('id_alumno').value)">
 						
 						
 						<br /><br />
-						
 						
 						<!-- DATOS PRINCIPALES ----------------------------------------------------->
 						
@@ -114,6 +128,7 @@
 																	
 						<br />
 						
+						<!-- FALTA INVESTIGAR ENTRADA DE FECHA -->
 						<label class="label_frm" >Fecha de nacimiento: </label>
 						
 						<!-- Retorna una fecha con formta YYYY-MM-DD -->
@@ -137,9 +152,9 @@
 						
 						<br><br>
 						
-						
 						<!-- INFORMACIÓN DE CONTACTO ----------------------------------------------------->
-												
+						
+						
 						<label class="label_frm">Información de contacto:  </label>
 						<br /><hr />
 										
@@ -213,10 +228,9 @@
 						<span class="espacio_horizontal_30px "></span>
 						
 						<label class="label_frm" >E-mail: </label>
-						<input class="input_frm"  type="email"  maxlength="25" value="@" name="email" style="width: 300px;"  >
+						<input class="input_frm"  type="email"  maxlength="15" value="@" name="email" style="width: 300px;"  >
 						
 						<br /><br />
-						
 						
 						<!-- DATOS VARIOS ----------------------------------------------------->
 						
@@ -247,6 +261,10 @@
 						</select>
 						
 						<br />
+						
+								
+						
+						
 						
 						<!-- FALTA AGREGAR BOTON DE FOTO -->
 						<!-- FALTA AGREGAR TEXTAREA DE ALERGIAS -->
@@ -295,6 +313,8 @@
 						<input class="btn_frm_aceptar" type="submit" name="btn_login" value="Registrar">
 					</form>
 				</div> <!-- div_frm_login -->
+				
+				
 				
 				
 			</div> <!-- div_login -->
