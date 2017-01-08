@@ -158,8 +158,8 @@
 						<label class="label_frm">Información de contacto:  </label>
 						<br /><hr />
 										
-						<label class="label_frm" >Domicilio: </label>
-						<input class="input_frm"  type="text"  maxlength="20" name="domicilio" style="width: 350px;" > 
+						<label class="label_frm" >Calle </label>
+						<input class="input_frm"  type="text"  maxlength="20" name="Calle" style="width: 350px;" > 
 						
 						<span class="espacio_horizontal_30px "></span>
 						

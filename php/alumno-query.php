@@ -17,7 +17,7 @@
 	$puntos_demerito = 0;// = $_REQUEST['puntos_demerito'];
 	$fecha_ingreso ="2016/12/23";// $_REQUEST['fecha_ingreso'];//La fecha debe estar en formato YYYY/MM/DD
 	$fecha_nacimiento = $_REQUEST['fecha_nacimiento'];//La fecha debe estar en formato YYYY/MM/DD
-	$domicilio = $_REQUEST['domicilio'];
+	$calle = $_REQUEST['calle'];
 	$colonia = $_REQUEST['colonia'];
 	$ciudad = $_REQUEST['ciudad'];
 	$estado = $_REQUEST['estado'];
@@ -48,7 +48,7 @@
 		`puntos_demerito`, 
 		`fecha_ingreso`, 
 		`fecha_nacimiento`, 
-		`domicilio`, 
+		`calle`, 
 		`colonia`, 
 		`ciudad`, 
 		`estado`, 
@@ -76,7 +76,7 @@
 		'$puntos_demerito', 
 		'$fecha_ingreso',
 	  	'$fecha_nacimiento',
-		'$domicilio',
+		'$calle',
 		'$colonia',
 		'$ciudad', 
 		'$estado', 
