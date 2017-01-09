@@ -30,7 +30,7 @@
 					<span id="span_titulo">Colegio Militarizado Águilas de México</span>
 					<br>
 					<span id="span_subtitulo">"Honor, estudio y disciplina"</span>
-				</div> <!-- div_span_titulo -->						
+				</div> <!-- div_span_titulo -->
 			</div><!-- div_cabecera -->
 
 			<div id="div_menu_navegacion">

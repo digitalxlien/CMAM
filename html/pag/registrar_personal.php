@@ -32,29 +32,24 @@
       <div id="div_cuerpo">
         <!-- Lo escencial de la pagina: -->
         <h1>Registrar personal:</h1>
-
+        <!-- DATOS DE NUEVO INGRESO ----------------------------------------------------->
         <div id="div_frm_registrar">
+          <label class="label_frm">Datos de nuevo ingreso: </label>
+          <hr />
+          <br/>
           <form  class= "frm_registrar" method="post" action=" " name="frm_registrar_alumno">
-              <div id="div_labels">
+                <div  id="div_labels">
                 <label class="label_frm">Numero de control: </label>
-                <br/>
                 <label class="label_frm">Nombre: </label>
-                <br/>
                 <label class="label_frm">Apellido paterno: </label>
-                <br/>
                 <label class="label_frm">Apellido materno: </label>
-                <br/>
                 <label class="label_frm" >Cargo: </label>
               </div>
               <div id="div_boxes">
                 <input id="id_personal" class="input_frm"  type="text"  maxlength="15" name="id_personal" required>
-                <br/>
                 <input id="nombre" class="input_frm"  type="text"  maxlength="30" name="nombre" required>
-                <br/>
                 <input id="apellido_paterno" class="input_frm"  type="text"  maxlength="30" name="apellido_paterno" required>
-                <br/>
                 <input id="apellido_materno" class="input_frm"  type="text"  maxlength="30" name="apellido_materno" required>
-                <br/>
                 <select id="id_cargo" class="input_frm" name="id_cargo" style="width: 150px;">
                   <option value="comandante">Comandante</option>
                   <option value="docente">Docente</option>
@@ -62,33 +57,7 @@
                   <option value="Secretaria">Secretaria</option>
                 </select>
               </div>
-
-            <!-- DATOS DE NUEVO INGRESO ----------------------------------------------------->
-          <!--  <label class="label_frm">Datos de nuevo ingreso: </label>
-            <br/><hr/>
-            <label class="label_frm">Numero de control: </label>
-            <input id="id_personal" class="input_frm"  type="text"  maxlength="15" name="id_personal" required>
-            <br/>
-            <label class="label_frm">Nombre: </label>
-            <input id="nombre" class="input_frm"  type="text"  maxlength="30" name="nombre" required>
-            <br/>
-            <label class="label_frm">Apellido paterno: </label>
-            <input id="apellido_paterno" class="input_frm"  type="text"  maxlength="30" name="apellido_paterno" required>
-            <br/>
-            <label class="label_frm">Apellido materno: </label>
-            <input id="apellido_materno" class="input_frm"  type="text"  maxlength="30" name="apellido_materno" required>
-            <br/>
-            <label class="label_frm" >Cargo: </label>
-            <select id="id_cargo" class="input_frm" name="id_cargo" style="width: 150px;">
-              <option value="comandante">Comandante</option>
-              <option value="docente">Docente</option>
-              <option value="coordinador">Coordinador</option>
-              <option value="Secretaria">Secretaria</option>
-            </select>
-            <br/>
-            <br/>
-            <input class="btn_frm_aceptar" type="submit" name="btn_login" value="Registrar">-->
-          </form>
+            </form>
         </div> <!--div_frm_registrar-->
 
       </div> <!-- div_cuerpo-->

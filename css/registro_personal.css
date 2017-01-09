@@ -1,8 +1,19 @@
 .frm_registrar{
   display: flex;
-  flex-direction: row;
-
 }
-.input_frm{
-  border-top: 100px;
+
+#div_labels{
+  display: flex;
+  flex-direction: column;
+}
+
+#div_boxes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 1rem;
+  width: 50%;
+}
+#id_personal{
+  width: 20%;
 }
