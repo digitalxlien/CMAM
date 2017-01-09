@@ -55,7 +55,7 @@ form hr {
 #div_cabecera {
 	width: 1024px;
 	height: 160px;
-	background-color: #547000;	
+	background-color: #547000;
 }
 
 #div_img_logo {
@@ -90,10 +90,13 @@ form hr {
 	height: 40px;
 	background-color: #3d3d3d;
 	border-bottom: 2px solid #000;
+	display: flex;
+	justify-content: center;
+
 }
 
 #div_menu_navegacion ul li {
-	text-decoration: none; /* Elimina el subrayado de los links */  
+	text-decoration: none; /* Elimina el subrayado de los links */
 	list-style: none; /* Eliminación de los puntos de la lista por default */
 	display: inline-block; /* Lista en horizontal */
 	padding: 0px 30px 0px 30px; /* Espaciado de letra */
@@ -131,7 +134,9 @@ form hr {
 	padding: 5px;
 }
 
-
+.label_frm{
+	color: red;
+}
 
 #div_frm_login {
 	position: absolute;
@@ -151,7 +156,7 @@ form hr {
 	padding: 30px;
 	margin: 50px 0px 50px 0px;
 	border-radius: 15px;
-	line-height: 40px; 
+	line-height: 40px;
 }
 
 
@@ -202,19 +207,19 @@ form hr {
 	color: #FFF;
 	background-color: #232323;
 }
- 
+
 .btn_frm_aceptar:hover {
 	background-color: #4A4A4A;
 	transition-duration: 0.5s;
 }
- 
+
 .espacio_horizontal_30px {
 	border:0px solid red;
 	padding: 0px 16px 0px 16px;
 	border: 0px solid red;
 }
- 
- 
+
+
 #span_pie_pagina {
 	color: #FFF;
 	font-family: arial_regular, arial_italica_bold, arial_bold;
@@ -226,13 +231,8 @@ form hr {
 	height: 128px;
 	background-color: #232323;
 	/* Centrado horizontal del texto: */
-	text-align: center; 
+	text-align: center;
 	/* Centrado vertical del texto: */
-	display: table-cell; 
+	display: table-cell;
 	vertical-align: middle;
 }
-
-
-
-
-
