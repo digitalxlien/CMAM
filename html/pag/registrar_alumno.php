@@ -1,4 +1,4 @@
-﻿<!DOCTYPe HTML 5>
+﻿<!DOCTYPE HTML 5>
 
 <?php
 	//Inclusión de archivos php

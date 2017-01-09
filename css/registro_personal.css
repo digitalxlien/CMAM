@@ -1,0 +1,8 @@
+.frm_registrar{
+  display: flex;
+  flex-direction: row;
+
+}
+.input_frm{
+  border-top: 100px;
+}
