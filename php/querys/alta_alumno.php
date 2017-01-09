@@ -1,6 +1,6 @@
 <?php
 	$base_datos = "db_cmam";//Verificar si se puede usar la variable que ya tiene el archivo conexion_db_cmam
-	include("conexion_db_cmam.php");
+	include("../conexion_db_cmam.php");
 	
 	/*Seleciona la base de datos a utilizar*/
 	mysqli_select_db($conexion, $base_datos) 

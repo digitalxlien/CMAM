@@ -19,8 +19,7 @@
 		echo "Conexión establecida. <br>" ;
 		echo "Informacion del host: " . mysqli_get_host_info($conexion);
 	}
-	*/
-		
+	*/	
 ?>
 
 

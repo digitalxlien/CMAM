@@ -262,13 +262,6 @@
 						
 						<br />
 						
-								
-						
-						
-						
-						<!-- FALTA AGREGAR BOTON DE FOTO -->
-						<!-- FALTA AGREGAR TEXTAREA DE ALERGIAS -->
-						
 						
 						<label class="label_frm">Rango: </label>
 						

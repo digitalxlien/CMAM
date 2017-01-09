@@ -187,7 +187,16 @@ form hr {
 	border-radius: 5px;
 }
 
-
+.input_file_frm {
+	
+	width: auto;
+	height: 30px;
+	font-family: arial_regular, arial_regular_bold;
+	font-size: 15px;
+	border-radius: 5px;
+	
+	
+}
 
 
 .input_frm_login {
