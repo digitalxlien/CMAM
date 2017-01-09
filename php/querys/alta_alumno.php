@@ -1,9 +1,8 @@
 <?php
-	$base_datos = "db_cmam";//Verificar si se puede usar la variable que ya tiene el archivo conexion_db_cmam
 	include("../conexion_db_cmam.php");
 
 	/*Seleciona la base de datos a utilizar*/
-	mysqli_select_db($conexion, $base_datos)
+	mysqli_select_db($conexion, $base_de_datos)
 		or die("Ha fallado la conexion con la base de datos");
 
 	/*Variables que obtienen los datos del formulario*/
