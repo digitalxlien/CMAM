@@ -2,7 +2,10 @@
 @import"base/base.css";
 /*fuentes: ------------------------------------------ */
 @import"fuentes/fonts.css";
+/*pag: ---------------------------------------------- */
+@import"pag/registrar_personal.css";
 
+/*Estilos principales: -------------------------------*/
 #div_contenedor_principal{
 	width: 1024px;
 	height: auto;

@@ -13,7 +13,6 @@
 		<script src="../../js/jquery-3.1.1.js"></script>
 		<script src="../../js/js_core.js"></script>
 		<link rel="stylesheet" href="../../css/estilo_principal.css">
-    <link rel="stylesheet" href="../../css/registro_personal.css">
 		<link rel="icon" type="image/png" href="../../img/logo_cmam_100x100.png" />
 	</head>
 
