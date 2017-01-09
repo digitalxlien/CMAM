@@ -211,7 +211,7 @@
 						<br />
 						<label class="label_frm">Alergias (descripción): </label>
 						<br />
-						<textarea form="frm_registrar_alumno" class="input_frm" rows="3"  maxlength="25"  style="width: 500px; height: 60px"></textarea>
+						<textarea id= "alergia" form="frm_registrar_alumno" class="input_frm" rows="3"  maxlength="25"  style="width: 500px; height: 60px"></textarea>
 						<br /><br />
 
 
