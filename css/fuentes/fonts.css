@@ -1,0 +1,25 @@
+/* Fuentes: ------------------------------------------ */
+@font-face {
+	font-family: 'arial_bold';
+	src: url(../../fonts/arial_bold.ttf);
+}
+
+@font-face {
+	font-family: 'arial_italica';
+	src: url(../../fonts/arial_italica.ttf);
+}
+
+@font-face {
+	font-family: 'arial_italica_bold';
+	src: url(../../fonts/arial_italica_bold.ttf);
+}
+
+@font-face {
+	font-family: 'arial_regular';
+	src: url(../../fonts/arial_regular.ttf);
+}
+
+@font-face {
+	font-family: 'arial_regular_bold';
+	src: url(../../fonts/arial_regular_bold.ttf);
+}
