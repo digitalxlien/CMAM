@@ -38,26 +38,31 @@
           <hr />
           <br/>
           <form  class= "frm_registrar" method="post" action=" " name="frm_registrar_alumno">
-                <div  id="div_labels">
-                <label class="label_frm">Numero de control: </label>
-                <label class="label_frm">Nombre: </label>
-                <label class="label_frm">Apellido paterno: </label>
-                <label class="label_frm">Apellido materno: </label>
-                <label class="label_frm" >Cargo: </label>
+            <div id="div_contenedor_formulario">
+              <div  id="div_labels">
+                  <label class="label_frm">Numero de control: </label>
+                  <label class="label_frm">Nombre: </label>
+                  <label class="label_frm">Apellido paterno: </label>
+                  <label class="label_frm">Apellido materno: </label>
+                  <label class="label_frm" >Cargo: </label>
               </div>
               <div id="div_boxes">
-                <input id="id_personal" class="input_frm"  type="text"  maxlength="15" name="id_personal" required>
-                <input id="nombre" class="input_frm"  type="text"  maxlength="30" name="nombre" required>
-                <input id="apellido_paterno" class="input_frm"  type="text"  maxlength="30" name="apellido_paterno" required>
-                <input id="apellido_materno" class="input_frm"  type="text"  maxlength="30" name="apellido_materno" required>
-                <select id="id_cargo" class="input_frm" name="id_cargo" style="width: 150px;">
-                  <option value="comandante">Comandante</option>
-                  <option value="docente">Docente</option>
-                  <option value="coordinador">Coordinador</option>
-                  <option value="Secretaria">Secretaria</option>
-                </select>
+                  <input id="id_personal" class="input_frm"  type="text"  maxlength="15" name="id_personal" required>
+                  <input id="nombre" class="input_frm"  type="text"  maxlength="30" name="nombre" required>
+                  <input id="apellido_paterno" class="input_frm"  type="text"  maxlength="30" name="apellido_paterno" required>
+                  <input id="apellido_materno" class="input_frm"  type="text"  maxlength="30" name="apellido_materno" required>
+                  <select id="id_cargo" class="input_frm" name="id_cargo" style="width: 150px;">
+                    <option value="comandante">Comandante</option>
+                    <option value="docente">Docente</option>
+                    <option value="coordinador">Coordinador</option>
+                    <option value="Secretaria">Secretaria</option>
+                  </select>
               </div>
-            </form>
+            </div>
+            <div id="div_btn_frm_aceptar">
+              <input class="btn_frm_aceptar" type="submit" name="btn_login" value="Registrar">
+            </div>
+          </form>
         </div> <!--div_frm_registrar-->
 
       </div> <!-- div_cuerpo-->
