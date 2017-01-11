@@ -9,6 +9,7 @@
 	
 	<head>
 		<meta charset="UTF-8"/>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title>Colegio Militarizado Águilas de México</title>
 		<script src="../../js/jquery-3.1.1.js"></script>
 		<script src="../../js/js_core.js"></script>

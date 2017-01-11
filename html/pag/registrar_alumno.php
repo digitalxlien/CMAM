@@ -9,6 +9,7 @@
 
 	<head>
 		<meta charset="UTF-8"/>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title>Colegio Militarizado Águilas de México</title>
 		<script src="../../js/jquery-3.1.1.js"></script>
 		<script src="../../js/js_core.js"></script>
@@ -157,8 +158,8 @@
 							<option value="Zacatecas">Zacatecas</option>
 						</select>
 						<br />
-						<label class="label_frm" >Código postal: </label>
-						<input class="input_frm"  type="text"  maxlength="8" name="codigo_postal">
+						<label class="label_frm" required>Código postal: </label>
+						<input class="input_frm"  type="text"  maxlength="5" name="codigo_postal">
 						<span class="espacio_horizontal_30px "></span>
 						<label class="label_frm" >Número de teléfono: </label>
 						<input class="input_frm"  type="text"  maxlength="15" name="numero_telefono">
@@ -194,10 +195,10 @@
 						</select>
 						<br />
 						<label class="label_frm" >Nacionalidad: </label>
-						<input class="input_frm"  type="text"  maxlength="20" name="numero_celular">
+						<input class="input_frm"  type="text"  maxlength="20" name="input_nacionalidad">
 						<span class="espacio_horizontal_30px "></span>
 						<label class="label_frm">Religión</label>
-						<input class="input_frm"  type="text"  maxlength="30" name="religion">
+						<input class="input_frm"  type="text"  maxlength="30" name="input_religion">
 						</br>
 						<label class="label_frm">Tutor: </label>
 						<select class="input_frm" name="tutor" id="tutor" style="width: 170px;">
@@ -211,7 +212,8 @@
 						<br />
 						<label class="label_frm">Alergias (descripción): </label>
 						<br />
-						<textarea id= "alergia" form="frm_registrar_alumno" class="input_frm" rows="3"  maxlength="25"  style="width: 500px; height: 60px"></textarea>
+						<input class="input_frm"  type="text"  maxlength="25" rows="3" style="width: 500px; height: 60px" name="input_alergia">
+						<!-- <input class="input_frm"  type="text" name="alergia" form="frm_registrar_alumno" rows="3"  maxlength="25"  style="width: 500px; height: 60px"> -->
 						<br /><br />
 
 
