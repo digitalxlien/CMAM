@@ -50,7 +50,7 @@
                   <label class="label_frm" >Cargo: </label>
               </div>
               <div id="div_boxes">
-                  <input id="id_personal" class="input_frm"  type="text"  maxlength="15" name="id_personal" required>
+                  <input id="id_personal" class="input_frm"  type="text"  maxlength="10" name="id_personal" style="width: 150px; required>
                   <input id="nombre" class="input_frm"  type="text"  maxlength="30" name="nombre" required>
 									<input id="contrasena" class="input_frm"  type="password"  maxlength="30" name="contrasena" required>
 									<input id="confirmar_contrasena" class="input_frm"  type="password"  maxlength="30" name="confirmar_contrasena" required>

@@ -6,12 +6,12 @@
   mysqli_select_db($conexion, $base_de_datos)
     or die("Ha fallado la conexion con la base de datos");
   /*Variables que obtienen los datos del formulario*/
-  $id_personal      = $_REQUEST['id_personal'];
+  $id_personal      = mb_strtoupper($_REQUEST['id_personal'],'utf-8');
   $contrasena       = $_REQUEST['contrasena'];
-  $id_cargo         = $_REQUEST['id_cargo'];
-  $nombre           = $_REQUEST['nombre'];
-  $apellido_paterno = $_REQUEST['apellido_paterno'];
-  $apellido_materno = $_REQUEST['apellido_materno'];
+  $id_cargo         = mb_strtoupper($_REQUEST['id_cargo'],'utf-8');
+  $nombre           = mb_strtoupper($_REQUEST['nombre'],'utf-8');
+  $apellido_paterno = mb_strtoupper($_REQUEST['apellido_paterno'],'utf-8');
+  $apellido_materno = mb_strtoupper($_REQUEST['apellido_materno'],'utf-8');
 
   /*Sentencia SQL*/
   $query =

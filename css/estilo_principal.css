@@ -19,7 +19,8 @@
 #div_cabecera {
 	width: 1024px;
 	height: 160px;
-	background-color: #547000;
+	/*background-color: #547000;*/
+	background: linear-gradient(90deg,#3a7000 40%,#4b8112 75%,#5d9423 100%);
 }
 
 #div_img_logo {
