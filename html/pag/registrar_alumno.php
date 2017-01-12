@@ -13,6 +13,7 @@
 		<title>Colegio Militarizado Águilas de México</title>
 		<script src="../../js/jquery-3.1.1.js"></script>
 		<script src="../../js/js_core.js"></script>
+		<script src="../../js/validar_clave.js"></script>
 		<link rel="stylesheet" href="../../css/estilo_principal.css">
 		<link rel="icon" type="image/png" href="../../img/logo_cmam_100x100.png" />
 	</head>
@@ -67,6 +68,11 @@
 						<!-- Número de control -->
 						<label class="label_frm" onclick="" />Número de control:</label>
 						<input name="id_alumno" id="id_alumno" type="text" class="input_frm" maxlength="9" required>
+						<br />
+						<label class="label_frm" onclick="" />Contraseña:</label>
+						<input id="contrasena" class="input_frm"  type="password"  maxlength="30" name="contrasena" style="width: 300px;" required><br />
+						<label class="label_frm" onclick="" />Confirmar contraseña:</label>
+						<input id="confirmar_contrasena" class="input_frm"  type="password"  maxlength="30" name="confirmar_contrasena" style="width: 220px;" required>
 						<br /><br />
 						<input name="btn_generar_numero_control" class="btn_frm_aceptar" type="button" value="Generar número de control" onclick="generar_numero_control_alumno(document.getElementById('nivel').value, document.getElementById('grupo').value)">
 						<input name="btn_introducir_numero_control" class="btn_frm_aceptar" type="button" value="Introducir número de control" onclick="introducir_numero_control_alumno(document.getElementById('id_alumno').value)">
@@ -432,9 +438,7 @@
 						<hr>
 						<br />
 						<br />
-
-
-						<input class="btn_frm_aceptar" type="submit" name="btn_login" value="Registrar">
+						<input class="btn_frm_aceptar" type="submit" name="btn_login" value="Registrar" onclick="return validarPassword()">
 					</form>
 				</div> <!-- div_frm_login -->
 

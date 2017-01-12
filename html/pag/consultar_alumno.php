@@ -50,17 +50,18 @@
 				<div id="div_frm_registrar">
 					<form  method="post" action="../../php/alumno-query.php" name="frm_registrar_alumno">
 						
-						<!-- DATOS DE NUEVO INGRESO ----------------------------------------------------->
+						<!-- DATOS GENERALES ----------------------------------------------------->
 						
-						<label class="label_frm">Datos de nuevo ingreso: </label>
+						<label class="label_frm">Datos generales: </label>
 						<br /><hr />
 						
 						
 						<label class="label_frm">Nivel: </label>
-						<select class="input_frm" name="nivel" id="nivel" style="width: 180px;">
+						<!-- <select class="input_frm" name="nivel" id="nivel" readonly>
 							<option value="S">Secundaria</option> 
 							<option value="B">Bachillerato</option>
-						</select>
+						</select> -->
+						<input class="input_frm" name="nivel" id="nivel" onfocus = "this.blur()">
 						
 						<span class="espacio_horizontal_30px"></span>
 						
@@ -83,10 +84,8 @@
 							<option value="02">B</option>
 							<option value="03">C</option>
 						</select>
-												
-						<br />
-						
-						<!-- Número de control -->
+								
+						<!--Número de control
 						<label class="label_frm" onclick="" />Número de control:</label>
 						
 						<input name="id_alumno" id="id_alumno" type="text" class="input_frm" maxlength="9" required>
@@ -98,7 +97,10 @@
 						
 						<input name="btn_introducir_numero_control" class="btn_frm_aceptar" type="button" value="Introducir número de control" onclick="introducir_numero_control_alumno(document.getElementById('id_alumno').value)">
 						
-						
+						<br /><br /> 
+							
+							 -->
+							 
 						<br /><br />
 						
 						<!-- DATOS PRINCIPALES ----------------------------------------------------->
@@ -298,14 +300,8 @@
 						<br />
 						<textarea form="frm_registrar_alumno" class="input_frm" rows="3"  maxlength="25"  style="width: 500px; height: 60px"></textarea>
 						
-											
-						
 						<br /><br />
-
-					
-						
-						<input class="btn_frm_aceptar" type="submit" name="btn_login" value="Registrar">
-					</form>
+						</form>
 				</div> <!-- div_frm_login -->
 				
 				

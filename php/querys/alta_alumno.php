@@ -7,6 +7,7 @@
 
 	/*Variables que obtienen los datos del formulario*/
 	$id_alumno 							= mb_strtoupper($_REQUEST['id_alumno'],'utf-8');
+	$contrasena							= $_REQUEST['contrasena'];
 	$apellido_paterno 			= mb_strtoupper($_REQUEST['apellido_paterno'],'utf-8');
 	$apellido_materno 			= mb_strtoupper($_REQUEST['apellido_materno'],'utf-8');
 	$nombre 								= mb_strtoupper($_REQUEST['nombre'],'utf-8');
@@ -65,6 +66,7 @@
 	"INSERT INTO `tbl_alumno`
 	(
 		`id_alumno`,
+		`contrasena`,
 		`apellido_paterno`,
 		`apellido_materno`,
 		`nombre`,
@@ -122,6 +124,7 @@
 	VALUES
 	(
 		'$id_alumno',
+		'$contrasena',
 		'$apellido_paterno',
 		'$apellido_materno',
 		'$nombre',
@@ -130,7 +133,7 @@
 		'$horas_arresto',
 		'$puntos_demerito',
 		'$fecha_ingreso',
-	  '$fecha_nacimiento',
+	  	'$fecha_nacimiento',
 		'$calle',
 		'$colonia',
 		'$ciudad',
