@@ -1,4 +1,30 @@
 /* Fuentes: ------------------------------------------ */
+
+@font-face {
+	font-family: 'caudex_bold';
+	src: url(../../fonts/Caudex-Bold.ttf);
+}
+
+@font-face {
+	font-family: 'caudex_bold_italic';
+	src: url(../../fonts/Caudex-BoldItalic.ttf);
+}
+
+
+@font-face {
+	font-family: 'caudex_italic';
+	src: url(../../fonts/Caudex-Italic.ttf);
+}
+
+
+@font-face {
+	font-family: 'caudex_regular';
+	src: url(../../fonts/Caudex-Regular.ttf);
+}
+
+
+
+
 @font-face {
 	font-family: 'arial_bold';
 	src: url(../../fonts/arial_bold.ttf);

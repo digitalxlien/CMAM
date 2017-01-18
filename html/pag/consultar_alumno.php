@@ -18,16 +18,20 @@
 	</head>
 
 	<body onload="precargarPagina()">
-	<!-- <body> -->
+	
+	
+		<div id="div_cabecera">
+			<!-- ../div_cebecera.php -->			
+		</div><!-- div_cabecera -->
+
+		<div id="div_menu_navegacion">
+			<!-- ../div_menu_navegacion.php -->
+		</div> <!-- div_menu_navegacion -->
+	
+
 		<div id="div_contenedor_principal" >
 			
-			<div id="div_cabecera">
-				<!-- ../div_cebecera.php -->			
-			</div><!-- div_cabecera -->
-
-			<div id="div_menu_navegacion">
-				<!-- ../div_menu_navegacion.php -->
-			</div> <!-- div_menu_navegacion -->
+			
 
 			<div id="div_cuerpo">	
 				<!-- Lo escencial de la pagina: -->
@@ -309,11 +313,15 @@
 				
 			</div> <!-- div_login -->
 
-			<div id="div_pie_pagina">
-				<!-- html/div_pie_pagina.php -->
-			</div> <!-- div_pie_pagina -->
+			
 
 		</div> <!-- div_contenedorPrincipal -->
+		
+		<div id="div_pie_pagina">
+			<!-- html/div_pie_pagina.php -->
+		</div> <!-- div_pie_pagina -->
+		
+		
 	</body>
 
 </html>

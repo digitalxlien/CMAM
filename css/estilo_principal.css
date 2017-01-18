@@ -1,74 +1,84 @@
 ﻿/*base: --------------------------------------------- */
-@import"base/base.css";
+@import "base/base.css";
 /*fuentes: ------------------------------------------ */
-@import"fuentes/fonts.css";
+@import "fuentes/fonts.css";
 /*pag: ---------------------------------------------- */
-@import"pag/registrar_personal.css";
+@import "pag/registrar_personal.css";
 
 /*Estilos principales: -------------------------------*/
-#div_contenedor_principal{
+#div_contenedor_principal {
 	width: 1024px;
 	height: auto;
 	margin: 0 auto; /* Centrado vertical */
 }
 
 
-/* Jijiji */
-
-
 #div_cabecera {
-	width: 1024px;
-	height: 160px;
-	/*background-color: #547000;*/
-	background: linear-gradient(90deg,#3a7000 40%,#4b8112 75%,#5d9423 100%);
+	min-width: 1024px;
+	width: 100%;
+	height: 120px;
+	background-color: #2e2e2e;
 }
 
+#div_cabecera_central {
+	position:absolute;
+	margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 1024px;
+}
+
+
+
 #div_img_logo {
-	padding: 16px 0px 16px 32px;
-	height: 128px;
-	width: 128px;
-	float: left;
+	height: 120px;
+	width: 120px;
+	float: left; /*siguiente div a la izquierda */ 
+	
+	/* Centrado de imagen: */
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;	
+}
+
+
+#img_logo {
+	height: 100px;
+	width: 100px;
+	padding:10px;
+}
+
+#div_menu_navegacion {
+	width: 100%;
+	height: 40px;
+	background-color: #7ea030;
+	display: flex;
+	justify-content: center;
+}
+
+
+#div_menu_navegacion_central {
+	position:absolute;
+	margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 1024px;	
 }
 
 #div_span_titulo {
 	float: left;
 }
 
-#span_titulo {
-	color: #FFF;
-	font-family: arial_bold, arial_regular;
-	font-size: 32px;
-	margin: 48px;
-	position: absolute;
-}
-
-#span_subtitulo {
-	color: #FFF;
-	font-family: arial_regular, arial_italica_bold, arial_bold;
-	font-size: 22px;
-	margin: 80px 0px 0px 48px;
-	position: absolute;
-}
-
-#div_menu_navegacion{
-	width: 1024px;
-	height: 40px;
-	background-color: #3d3d3d;
-	border-bottom: 2px solid #000;
-	display: flex;
-	justify-content: center;
-
-}
 
 #div_menu_navegacion ul li {
 	text-decoration: none; /* Elimina el subrayado de los links */
 	list-style: none; /* Eliminación de los puntos de la lista por default */
 	display: inline-block; /* Lista en horizontal */
-	padding: 0px 30px 0px 30px; /* Espaciado de letra */
+	padding: 0px 25px 0px 25px; /* Espaciado entre palabras*/
 	font-family: arial_regular;
 	color: #FFFFFF; /* Color de letra */
 	float: left; /* Botones juntos */
-	background-color: #3d3d3d;
+	background-color: #7ea030;
 	height: 40px; /* Altura de boton*/
 	line-height: 40px; /* Centrado verticalmente */
 }
@@ -81,22 +91,24 @@
 #div_login {
 	width: 1024px;
 	height: 472px;
-	background-color: #fff;
+	background-color: #2e2e2e;
 }
 
 #div_cuerpo {
 	width: auto;
 	height: auto;
-	background-color: #fff;
-	font-family: arial_regular, arial_regular_bold;
-	color: #232323;
+	background-color: #2b2b2b;
+	font-family: caudex_bold, caudex_regular, arial_regular, arial_regular_bold;
+	color: #fff;
 	font-size: 22px;
 	padding: 40px;
 }
 
 #div_cuerpo h1{
-	font-size: 30px;
+	font-size: 25px;
 	padding: 5px;
+	text-transform: uppercase;
+	line-height: 0px; 
 }
 
 #div_frm_login {
@@ -119,6 +131,57 @@
 	border-radius: 15px;
 	line-height: 40px;
 }
+
+
+#div_pie_pagina {
+	
+	font-family: caudex_bold, caudex_regular, arial_regular, arial_italica_bold, arial_bold;
+	color: #FFFFFF;
+	font-size: 16px;
+	text-transform: uppercase;
+	width: 100%;
+	height: 45px;
+	background-color: #2e2e2e;
+	padding: 45px;
+	border-top:#4A4A4A 3px solid;
+   
+}
+
+
+#div_pie_pagina_central {
+	position: absolute;
+	margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 1024px;	
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+
+#span_titulo {
+	color: #FFF;
+	font-family: caudex_bold, caudex_regular, arial_bold, arial_regular;
+	font-size: 32px;
+	margin: 20px 0px 0px 30px ;
+	position: absolute;
+	text-transform: uppercase;
+	
+}
+
+#span_subtitulo {
+	color: #7ea030;
+	font-family: caudex_bold, caudex_regular, arial_bold, arial_regular;
+	font-size: 16px;
+	margin: 50px 0px 0px 30px ;
+	position: absolute;
+	text-transform: uppercase;
+}
+
+
+
 
 
 
@@ -144,8 +207,6 @@
 	font-family: arial_regular, arial_regular_bold;
 	font-size: 15px;
 	border-radius: 5px;
-
-
 }
 
 
@@ -179,19 +240,4 @@
 }
 
 
-#span_pie_pagina {
-	color: #FFF;
-	font-family: arial_regular, arial_italica_bold, arial_bold;
-	font-size: 16px;
-}
 
-#div_pie_pagina {
-	width: 1024px;
-	height: 128px;
-	background-color: #232323;
-	/* Centrado horizontal del texto: */
-	text-align: center;
-	/* Centrado vertical del texto: */
-	display: table-cell;
-	vertical-align: middle;
-}
