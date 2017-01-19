@@ -14,6 +14,10 @@
 		<script src="../../js/jquery-3.1.1.js"></script>
 		<script src="../../js/js_core.js"></script>
 		<script src="../../js/validar_clave.js"></script>
+		
+		<script src="../../js/mysqlwslib.js"></script>
+		
+		
 		<link rel="stylesheet" href="../../css/estilo_principal.css">
 		<link rel="icon" type="image/png" href="../../img/logo_cmam_100x100.png" />
 	</head>
@@ -77,8 +81,8 @@
 						<label class="label_frm" onclick="" />Confirmar contraseña:</label>
 						<input id="confirmar_contrasena" class="input_frm"  type="password"  maxlength="30" name="confirmar_contrasena" style="width: 220px;" required>
 						<br /><br />
-						<input name="btn_generar_numero_control" class="btn_frm_aceptar" type="button" value="Generar número de control" onclick="generar_numero_control_alumno(document.getElementById('nivel').value, document.getElementById('grupo').value)">
-						<input name="btn_introducir_numero_control" class="btn_frm_aceptar" type="button" value="Introducir número de control" onclick="introducir_numero_control_alumno(document.getElementById('id_alumno').value)">
+						<input name="btn_generar_numero_control" class="btn_frm_aceptar" type="button" value="Generar número de control" onclick="generarNumeroControlAlumno(document.getElementById('nivel').value, document.getElementById('grupo').value)">
+						<input name="btn_introducir_numero_control" class="btn_frm_aceptar" type="button" value="Introducir número de control" onclick="introducirNumeroControlAlumno(document.getElementById('id_alumno').value)">
 						<br /><br />
 
 
@@ -108,7 +112,7 @@
 						<span class="espacio_horizontal_30px "></span>
 						<label class="label_frm">CURP: </label>
 						<input id="curp" class="input_frm"  type="text" name="curp" maxlength="18"
-							onfocus="generar_curp(
+							onfocus="generarCurp(
 								document.getElementById('apellido_paterno').value,
 								document.getElementById('apellido_materno').value,
 								document.getElementById('nombre').value,

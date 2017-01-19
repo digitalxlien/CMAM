@@ -97,9 +97,9 @@
 						<br /><br />
 						
 						
-						<input name="btn_generar_numero_control" class="btn_frm_aceptar" type="button" value="Generar número de control" onclick="generar_numero_control_alumno(document.getElementById('nivel').value, document.getElementById('grupo').value)">
+						<input name="btn_generar_numero_control" class="btn_frm_aceptar" type="button" value="Generar número de control" onclick="generarNumeroControlAlumno(document.getElementById('nivel').value, document.getElementById('grupo').value)">
 						
-						<input name="btn_introducir_numero_control" class="btn_frm_aceptar" type="button" value="Introducir número de control" onclick="introducir_numero_control_alumno(document.getElementById('id_alumno').value)">
+						<input name="btn_introducir_numero_control" class="btn_frm_aceptar" type="button" value="Introducir número de control" onclick="introducirNumeroControlAlumno(document.getElementById('id_alumno').value)">
 						
 						<br /><br /> 
 							
@@ -147,7 +147,7 @@
 												
 						
 						<input id="curp" class="input_frm"  type="text" name="curp" maxlength="18" 
-							onfocus="generar_curp(
+							onfocus="generarCurp(
 								document.getElementById('apellido_paterno').value,
 								document.getElementById('apellido_materno').value,
 								document.getElementById('nombre').value,

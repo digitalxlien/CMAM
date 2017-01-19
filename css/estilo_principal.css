@@ -227,9 +227,11 @@
 .input_frm_login {
 	width: 300px;
 	height: 30px;
-	font-family: muli_regular;
-	font-size: 20px;
+	font-size: 16px;
+	border-radius: 5px;
 	padding-left: 10px;
+	text-transform: uppercase;
+	border: 0px;
 }
 
 .btn_frm_aceptar {

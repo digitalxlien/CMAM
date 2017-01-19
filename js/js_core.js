@@ -1,4 +1,5 @@
 
+
 function precargarPaginaIndex(){
 	
 	//Carga los divs a la pagina Index.php
@@ -31,35 +32,36 @@ function precargarPagina(){
 	
 }
 
-function set_value(id_elemento, nuevo_valor){
+function setValue(id_elemento, nuevo_valor){
 	//Asigna un nuevo valor al elemento:	
 	$("#"+id_elemento).prop('value', nuevo_valor);
 }
 
 
-function set_readonly(id_elemento, valor){
+function setReadOnly(id_elemento, valor){
 	//Asigna un nuevo valor al elemento:	
 	$("#"+id_elemento).prop('readonly', valor);
 }
 
-function generar_numero_control_alumno(nivel, grupo){
+function generarNumeroControlAlumno(nivel, grupo){
 	
 	
 	//Año:
 	var fecha = new Date();
 	var ano =  fecha.getFullYear().toString();
-		
+
 	//Forma del numero de control: [TIPO DE USUARIO] + [NIVEL] + [GRUPO] + [AÑO] + [NUMERO DE ALUMNO].
-	numero_control = "A" + nivel + grupo + ano.charAt(2) + ano.charAt(3) + "NNN";
+	numero_control = "A" + nivel + grupo + ano.charAt(2) + ano.charAt(3) + "000"; 
+	
 
 
 	/* ****************************
 	 * 
-	 *	FALTA REALIZAR UN METODOS DONDE "NNN" SEA EL ULTIMO VALOR ENCONTRADO NO REPETIDO EN LA BASE DE DATOS. 
+	 *	FALTA REALIZAR UN METODOS DONDE "000" SEA EL ULTIMO VALOR ENCONTRADO NO REPETIDO EN LA BASE DE DATOS. 
 	 * 
 	 */
 
-	set_readonly('id_alumno', true);
+	setReadOnly('id_alumno', true);
 
 	//return numero_control;
 	$("#id_alumno").prop('value', numero_control);
@@ -67,15 +69,15 @@ function generar_numero_control_alumno(nivel, grupo){
 
 
 
-function introducir_numero_control_alumno(id_elemento){
-	set_value('id_alumno', "");
-	set_readonly('id_alumno', false);	
+function introducirNumeroControlAlumno(id_elemento){
+	setValue('id_alumno', "");
+	setReadOnly('id_alumno', false);	
 }
 
 
 
 
-function generar_curp(apellido_paterno, apellido_materno, nombre, fecha_nacimiento, sexo, id_elemento){
+function generarCurp(apellido_paterno, apellido_materno, nombre, fecha_nacimiento, sexo, id_elemento){
 	//Este metodo genera los primeros 12 digitos aproximados de la curp.
 	var curp;
 
@@ -93,7 +95,7 @@ function generar_curp(apellido_paterno, apellido_materno, nombre, fecha_nacimien
 	 	sexo;	
 		
 	// Enviarla al elemento especificado 
-	set_value(id_elemento, curp.toUpperCase());
+	setValue(id_elemento, curp.toUpperCase());
 }
 
 
