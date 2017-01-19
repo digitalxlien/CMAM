@@ -1,5 +1,6 @@
 /* Fuentes: ------------------------------------------ */
 
+/* ------ CADEUX FAMILY ------ */
 @font-face {
 	font-family: 'caudex_bold';
 	src: url(../../fonts/Caudex-Bold.ttf);
@@ -10,12 +11,10 @@
 	src: url(../../fonts/Caudex-BoldItalic.ttf);
 }
 
-
 @font-face {
 	font-family: 'caudex_italic';
 	src: url(../../fonts/Caudex-Italic.ttf);
 }
-
 
 @font-face {
 	font-family: 'caudex_regular';
@@ -23,29 +22,63 @@
 }
 
 
-
-
+/* ------ MULI FAMILY ------ */
 @font-face {
-	font-family: 'arial_bold';
-	src: url(../../fonts/arial_bold.ttf);
+	font-family: 'muli_black';
+	src: url(../../fonts/Muli-Black.ttf);
 }
 
 @font-face {
-	font-family: 'arial_italica';
-	src: url(../../fonts/arial_italica.ttf);
+	font-family: 'muli_black_italic';
+	src: url(../../fonts/Muli-BlackItalic.ttf);
 }
 
 @font-face {
-	font-family: 'arial_italica_bold';
-	src: url(../../fonts/arial_italica_bold.ttf);
+	font-family: 'muli_bold';
+	src: url(../../fonts/Muli-Bold.ttf);
 }
 
 @font-face {
-	font-family: 'arial_regular';
-	src: url(../../fonts/arial_regular.ttf);
+	font-family: 'muli_bold_italic';
+	src: url(../../fonts/Muli-Bold.ttf);
+}
+
+
+@font-face {
+	font-family: 'muli_italic';
+	src: url(../../fonts/Muli-Italic.ttf);
+}
+
+
+@font-face {
+	font-family: 'muli_light';
+	src: url(../../fonts/Muli-Light.ttf);
 }
 
 @font-face {
-	font-family: 'arial_regular_bold';
-	src: url(../../fonts/arial_regular_bold.ttf);
+	font-family: 'muli_light_italic';
+	src: url(../../fonts/Muli-Light-Italic.ttf);
 }
+
+@font-face {
+	font-family: 'muli_regular';
+	src: url(../../fonts/Muli-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'muli_semibold';
+	src: url(../../fonts/Muli-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: 'muli_semibold_italic';
+	src: url(../../fonts/Muli-SemiBold-Italic.ttf);
+}
+
+
+
+
+
+
+
+

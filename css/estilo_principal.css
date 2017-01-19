@@ -5,6 +5,17 @@
 /*pag: ---------------------------------------------- */
 @import "pag/registrar_personal.css";
 
+	/*-------- Colores ---------
+	 * Verde		: #7ea030;
+	 * Gris	Oscuro	: #2e2e2e;
+	 * Gris Claro	: #4a4a4a; 	
+	 * Azul			: #00548c;
+	 * 
+	 * 
+	 */
+	
+
+
 /*Estilos principales: -------------------------------*/
 #div_contenedor_principal {
 	width: 1024px;
@@ -19,6 +30,7 @@
 	height: 120px;
 	background-color: #2e2e2e;
 }
+
 
 #div_cabecera_central {
 	position:absolute;
@@ -41,12 +53,6 @@
 	vertical-align: middle;	
 }
 
-
-#img_logo {
-	height: 100px;
-	width: 100px;
-	padding:10px;
-}
 
 #div_menu_navegacion {
 	width: 100%;
@@ -75,12 +81,13 @@
 	list-style: none; /* Eliminación de los puntos de la lista por default */
 	display: inline-block; /* Lista en horizontal */
 	padding: 0px 25px 0px 25px; /* Espaciado entre palabras*/
-	font-family: arial_regular;
+	font-family: muli_regular;
 	color: #FFFFFF; /* Color de letra */
 	float: left; /* Botones juntos */
 	background-color: #7ea030;
 	height: 40px; /* Altura de boton*/
 	line-height: 40px; /* Centrado verticalmente */
+
 }
 
 #div_menu_navegacion ul li:hover {
@@ -97,8 +104,8 @@
 #div_cuerpo {
 	width: auto;
 	height: auto;
-	background-color: #2b2b2b;
-	font-family: caudex_bold, caudex_regular, arial_regular, arial_regular_bold;
+	background-color: #2e2e2e;
+	font-family: caudex_bold, caudex_regular;
 	color: #fff;
 	font-size: 22px;
 	padding: 40px;
@@ -120,6 +127,7 @@
 	margin: 50px;
 	margin-left: 332px;
 	border-radius: 15px;
+	
 }
 
 #div_frm_registrar {
@@ -134,17 +142,15 @@
 
 
 #div_pie_pagina {
-	
-	font-family: caudex_bold, caudex_regular, arial_regular, arial_italica_bold, arial_bold;
+	font-family: caudex_bold, caudex_regular;
 	color: #FFFFFF;
 	font-size: 16px;
 	text-transform: uppercase;
 	width: 100%;
-	height: 45px;
-	background-color: #2e2e2e;
-	padding: 45px;
+	height: 30px;
+	background-color: #2E2E2E;
+	padding: 30px;
 	border-top:#4A4A4A 3px solid;
-   
 }
 
 
@@ -163,7 +169,7 @@
 
 #span_titulo {
 	color: #FFF;
-	font-family: caudex_bold, caudex_regular, arial_bold, arial_regular;
+	font-family: caudex_bold, caudex_regular;
 	font-size: 32px;
 	margin: 20px 0px 0px 30px ;
 	position: absolute;
@@ -172,8 +178,8 @@
 }
 
 #span_subtitulo {
-	color: #7ea030;
-	font-family: caudex_bold, caudex_regular, arial_bold, arial_regular;
+	color: #7EA030;
+	font-family: caudex_bold, caudex_regular;
 	font-size: 16px;
 	margin: 50px 0px 0px 30px ;
 	position: absolute;
@@ -181,13 +187,19 @@
 }
 
 
+#img_logo {
+	height: 100px;
+	width: 100px;
+	padding:10px;
+}
+
 
 
 
 
 .label_frm {
 	color: #fff;
-	font-family: arial_regular, arial_regular_bold;
+	font-family: muli_regular;
 	font-size: 18px;
 	position: relative;
 }
@@ -195,16 +207,18 @@
 .input_frm {
 	width: auto;
 	height: 30px;
-	font-family: arial_regular, arial_regular_bold;
-	font-size: 20px;
+	font-family: muli_regular;
+	font-size: 16px;
 	border-radius: 5px;
+	padding-left: 10px;
+	text-transform: uppercase;
+	border: 0px;
 }
 
 .input_file_frm {
-
 	width: auto;
 	height: 30px;
-	font-family: arial_regular, arial_regular_bold;
+	font-family: muli_regular;
 	font-size: 15px;
 	border-radius: 5px;
 }
@@ -213,14 +227,15 @@
 .input_frm_login {
 	width: 300px;
 	height: 30px;
-	font-family: arial_regular, arial_regular_bold;
+	font-family: muli_regular;
 	font-size: 20px;
+	padding-left: 10px;
 }
 
 .btn_frm_aceptar {
 	width: 300px;
 	height: 40px;
-	font-family: arial_regular, arial_regular_bold;
+	font-family: muli_bold;
 	font-size: 20px;
 	border-radius: 5px;
 	border: none;
