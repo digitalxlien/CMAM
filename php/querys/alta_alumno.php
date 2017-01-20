@@ -180,11 +180,21 @@
 		'$madre_profesion'
 	) ";
 
-	/*Se ejecuta el query*/
+	
+	
+	
+	//Se ejecuta el query:
 	$resultado = mysqli_query($conexion, $query)
-		or die ("No se pudo ejecutar el query " .mysqli_error($conexion) );
-	echo "Datos ingresados correctamente";
-
+	
+	//Si falla (or die), redirecciona a la pagina de fallo.
+	or die (header('Location: ../../html/pag/alumno_registro_incorrecto.php'));
+		
+	//Si no falla, redirecciona a la pagina de registro correcto.
+	header('Location: ../../html/pag/alumno_registro_correcto.php');
+	
+	
+	
+	
 	/*Esta es una sentencia de prueba*/
 	/*$query2 =
 	"INSERT INTO `tbl_alumno`

@@ -164,6 +164,22 @@
     vertical-align: middle;
 }
 
+#div_registro_correcto {
+	color: #0b7402;
+	padding: 35px 20px 35px 20px;
+	background-color: #b9fdb3;
+	text-align: center;
+	border-radius: 5px;
+}
+
+#div_registro_incorrecto {
+	color: #740202;
+	background-color: #fdbab3;
+	padding: 35px 20px 35px 20px;
+	text-align: center;
+	border-radius: 5px;
+}
+
 
 
 
