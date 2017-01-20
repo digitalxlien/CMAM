@@ -108,3 +108,4 @@ function generarCurp(apellido_paterno, apellido_materno, nombre, fecha_nacimient
 
 
 
+
