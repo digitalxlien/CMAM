@@ -40,19 +40,18 @@
 				
 				<div id="div_frm_buscar">
 				
-					<form method="post" name="frm_registrar_alumno">
+					<form method="post" name="frm_registrar_alumno" action="../../php/querys/consulta_alumno.php">
 						
 						<label class="label_frm">Número de control:</label>
-						<input name="id_alumno" id="id_alumno" type="text" class="input_frm" maxlength="9" required>
-						<input name="bnt_buscar_alumno" id="btn_buscar_alumno" type="button"  class="btn_frm_aceptar" value="Buscar alumno"/>
-						
+						<input name="id_alumno" id="id_alumno" type="search" class="input_frm" maxlength="9" required>
+						<input name="bnt_buscar_alumno" id="btn_buscar_alumno" type="submit" class="btn_frm_aceptar" value="Buscar alumno"/>
 					</form>
-					
+						
 					
 				</div>
 				
 				<div id="div_frm_registrar">
-					<form  method="post" action="../../php/alumno-query.php" name="frm_registrar_alumno">
+					<form  method="post" name="frm_registrar_alumno">
 						
 						<!-- DATOS GENERALES ----------------------------------------------------->
 						
@@ -110,8 +109,7 @@
 						<!-- DATOS PRINCIPALES ----------------------------------------------------->
 						
 						<label class="label_frm">Datos principales: </label>
-						<br /><hr />	
-						
+						<br /><hr />
 						<label class="label_frm" >Apellido paterno: </label>
 						<input id="apellido_paterno" class="input_frm"  type="text"  maxlength="20" name="apellido_paterno" required>
 						

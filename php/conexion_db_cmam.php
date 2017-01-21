@@ -9,7 +9,6 @@
 
 	//Conexion a la base de datos.
 	$conexion = mysqli_connect($servidor, $usuario, $contraseña, $base_de_datos);
-	
 	mysqli_set_charset($conexion, "utf8");
 	
 	
