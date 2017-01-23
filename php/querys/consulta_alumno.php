@@ -8,10 +8,10 @@
 	// $usuario = 'admin';
 	// $contraseña = "qwerty1234";
 	// $base_de_datos = "db_cmam";
-// 
+//
 	// //Conexion a la base de datos.
 	// $conexion = mysqli_connect($servidor, $usuario, $contraseña, $base_de_datos);
-	$id_alumno = mb_strtoupper($_REQUEST['id_alumno'],'utf-8');
+	$id_alumno = mb_strtoupper($_POST['id_alumno'],'utf-8');
 	$myQuery = "SELECT * FROM tbl_alumno WHERE id_alumno='".$id_alumno."'";
 	$result = mysqli_query($conexion, $myQuery);
 	//$result = mysqli_query($conexion, "SELECT * FROM tbl_alumno WHERE id_alumno='AS0117000'");
