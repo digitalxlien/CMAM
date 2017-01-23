@@ -10,6 +10,8 @@
 	 * Gris	Oscuro	: #2e2e2e;
 	 * Gris Claro	  : #4a4a4a;
 	 * Azul			    : #00548c;
+	 * Gris Claro	: #4a4a4a;
+	 * Azul			: #00548c;
 	 *
 	 *
 	 */
@@ -109,6 +111,7 @@
 	color: #fff;
 	font-size: 22px;
 	padding: 40px;
+	border-radius: 15px;
 }
 
 #div_cuerpo h1{
@@ -217,6 +220,13 @@
 	color: #fff;
 	font-family: muli_regular;
 	font-size: 18px;
+	position: relative;
+}
+
+.label_asterisco{
+	color: #fff;
+	font-family: muli_regular;
+	font-size: 14px;
 	position: relative;
 }
 

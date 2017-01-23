@@ -6,7 +6,7 @@
 ?>
 
 <html lang="es" >
-	
+
 	<head>
 		<meta charset="UTF-8"/>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -18,46 +18,45 @@
 	</head>
 
 	<body onload="precargarPagina()">
-	
-	
+
+
 		<div id="div_cabecera">
-			<!-- ../div_cebecera.php -->			
+			<!-- ../div_cebecera.php -->
 		</div><!-- div_cabecera -->
 
 		<div id="div_menu_navegacion">
 			<!-- ../div_menu_navegacion.php -->
 		</div> <!-- div_menu_navegacion -->
-	
+
 
 		<div id="div_contenedor_principal" >
-			
-			
 
-			<div id="div_cuerpo">	
+
+
+			<div id="div_cuerpo">
 				<!-- Lo escencial de la pagina: -->
 				<h1>¡Error al registrar!</h1>
 				<br />
-								
+
 				<div id="div_registro_incorrecto">
 					<img src="../../img/uncheck.png" align="middle">
-					
-					Ocurrió un error al registar el alumno.
-					
+
+					Ocurrió un error al registrar el alumno.
+
 				</div>
-				
-				
+
+
 			</div> <!-- div_cuerpo -->
 
-			
+
 
 		</div> <!-- div_contenedorPrincipal -->
-		
+
 		<div id="div_pie_pagina">
 			<!-- html/div_pie_pagina.php -->
 		</div> <!-- div_pie_pagina -->
-		
-		
+
+
 	</body>
 
 </html>
-
