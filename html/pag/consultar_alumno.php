@@ -34,11 +34,11 @@
 
 			<div id="div_cuerpo">
 				<!-- Lo escencial de la pagina: -->
-					<h1>Consultar alumno:</h1>
+				<h1>Consultar alumno:</h1>
 
 				<div id="div_frm_buscar">
 
-					<form name="frm_registrar_alumno" method="post" action="../../php/querys/consulta_alumnoB.php" >
+					<form name="frm_registrar_alumno" >
 
 						<label class="label_frm">Número de control:</label>
 						<input name="id_alumno" id="id_alumno" type="text" class="input_frm" maxlength="9" required>

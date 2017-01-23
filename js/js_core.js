@@ -99,7 +99,7 @@ function consultaAlumno() {
 	//Obtiene el id del alumno y lo almacena en una variable
 	var id_alumno = document.getElementById("id_alumno").value;
 	//Llama al archivo consulta_alumnoB.php pasando como parametro el id del alumno
-	$("#div_resultado").load("../../php/querys/consulta_alumnoB.php",{
+	$("#div_resultado").load("../../php/querys/consulta_alumno.php",{
 		'id_alumno': id_alumno
 	});
 }
