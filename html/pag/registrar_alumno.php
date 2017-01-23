@@ -14,27 +14,27 @@
 		<script src="../../js/jquery-3.1.1.js"></script>
 		<script src="../../js/js_core.js"></script>
 		<script src="../../js/validar_clave.js"></script>
-		
+
 		<script src="../../js/mysqlwslib.js"></script>
-		
-		
+
+
 		<link rel="stylesheet" href="../../css/estilo_principal.css">
 		<link rel="icon" type="image/png" href="../../img/logo_cmam_100x100.png" />
 	</head>
 
 	<body onload="precargarPagina()">
-	
-		
+
+
 		<div id="div_cabecera">
 				<!-- ../div_cebecera.php -->
 		</div><!-- div_cabecera -->
-		
-		
+
+
 		<div id="div_menu_navegacion">
 			<!-- ../div_menu_navegacion.php -->
 		</div> <!-- div_menu_navegacion -->
 
-		
+
 		<div id="div_contenedor_principal" >
 
 			<div id="div_cuerpo">
@@ -72,13 +72,14 @@
 							<option value="03">C</option>
 						</select>
 						<br />
+						<label class="asterisco" onclick="" />Los campos con asterísco son obligatorios (*)</label><br />
 						<!-- Número de control -->
-						<label class="label_frm" onclick="" />Número de control:</label>
+						<label class="label_frm" onclick="" />* Número de control:</label>
 						<input name="id_alumno" id="id_alumno" type="text" class="input_frm" maxlength="9" required>
 						<br />
-						<label class="label_frm" onclick="" />Contraseña:</label>
+						<label class="label_frm" onclick="" />* Contraseña:</label>
 						<input id="contrasena" class="input_frm"  type="password"  maxlength="30" name="contrasena" style="width: 300px;" required><br />
-						<label class="label_frm" onclick="" />Confirmar contraseña:</label>
+						<label class="label_frm" onclick="" />* Confirmar contraseña:</label>
 						<input id="confirmar_contrasena" class="input_frm"  type="password"  maxlength="30" name="confirmar_contrasena" style="width: 220px;" required>
 						<br /><br />
 						<input name="btn_generar_numero_control" class="btn_frm_aceptar" type="button" value="Generar número de control" onclick="generarNumeroControlAlumno(document.getElementById('nivel').value, document.getElementById('grupo').value)">
@@ -90,13 +91,13 @@
 
 						<label class="label_frm">Datos principales: </label>
 						<br /><hr />
-						<label class="label_frm" >Apellido paterno: </label>
+						<label class="label_frm" >* Apellido paterno: </label>
 						<input id="apellido_paterno" class="input_frm"  type="text"  maxlength="30" name="apellido_paterno" required>
 						<span class="espacio_horizontal_30px "></span>
-						<label class="label_frm" >Apellido materno: </label>
+						<label class="label_frm" >* Apellido materno: </label>
 						<input id="apellido_materno" class="input_frm"  type="text"  maxlength="30" name="apellido_materno" required >
 						<br />
-						<label class="label_frm" >Nombre(s): </label>
+						<label class="label_frm" >* Nombre(s): </label>
 						<input id="nombre" class="input_frm"  type="text"  maxlength="30" name="nombre" required style="width: 260px;">
 						<span class="espacio_horizontal_30px "></span>
 						<label class="label_frm" >Sexo: </label>
@@ -105,13 +106,13 @@
 							<option value="M">Mujer</option>
 						</select>
 						<br />
-						<label class="label_frm" >Fecha de nacimiento: </label>
+						<label class="label_frm" >* Fecha de nacimiento: </label>
 
 						<!-- Retorna una fecha con formta YYYY-MM-DD -->
 						<input id="fecha_nacimiento" type="date" name="fecha_nacimiento" min="1950-01-01" value="2000-01-01" class="input_frm" required>
 						<span class="espacio_horizontal_30px "></span>
-						<label class="label_frm">CURP: </label>
-						<input id="curp" class="input_frm"  type="text" name="curp" maxlength="18"
+						<label class="label_frm">* CURP: </label>
+						<input id="curp" class="input_frm" required type="text" name="curp" maxlength="18"
 							onfocus="generarCurp(
 								document.getElementById('apellido_paterno').value,
 								document.getElementById('apellido_materno').value,
@@ -126,16 +127,16 @@
 						<!-- INFORMACIÓN DE CONTACTO ----------------------------------------------------->
 						<label class="label_frm">Información de contacto:  </label>
 						<br /><hr />
-						<label class="label_frm" >Calle: </label>
-						<input class="input_frm"  type="text"  maxlength="30" name="calle" style="width: 350px;" >
+						<label class="label_frm" >* Calle: </label>
+						<input class="input_frm"  type="text"  maxlength="30" name="calle" style="width: 350px;" required>
 						<span class="espacio_horizontal_30px "></span>
-						<label class="label_frm" >Colonia: </label>
-						<input class="input_frm"  type="text"  maxlength="30" name="colonia">
+						<label class="label_frm" >* Colonia: </label>
+						<input class="input_frm"  type="text"  maxlength="30" name="colonia" required>
 						<br />
-						<label class="label_frm" >Ciudad: </label>
-						<input class="input_frm"  type="text"  maxlength="30" name="ciudad">
+						<label class="label_frm" >* Ciudad: </label>
+						<input class="input_frm"  type="text"  maxlength="30" name="ciudad" required>
 						<span class="espacio_horizontal_30px "></span>
-						<label class="label_frm" >Estado: </label>
+						<label class="label_frm" >* Estado: </label>
 						<select id="estado" name="estado" class="input_frm" >
 							<option value="Jalisco">Jalisco</option>
 							<option value="Aguascalientes">Aguascalientes</option>
@@ -171,8 +172,8 @@
 							<option value="Zacatecas">Zacatecas</option>
 						</select>
 						<br />
-						<label class="label_frm" required>Código postal: </label>
-						<input class="input_frm"  type="text"  maxlength="5" name="codigo_postal">
+						<label class="label_frm">* Código postal: </label>
+						<input class="input_frm"  type="text"  maxlength="5" name="codigo_postal" required>
 						<span class="espacio_horizontal_30px "></span>
 						<label class="label_frm" >Número de teléfono: </label>
 						<input class="input_frm"  type="text"  maxlength="15" name="numero_telefono">
@@ -288,13 +289,13 @@
 						<label class="label_frm">Datos del Padre (o tutor):  </label>
 						<br /><hr />
 
-						<label class="label_frm" >Apellido paterno del padre: </label>
+						<label class="label_frm" >* Apellido paterno del padre: </label>
 						<input id="padre_apellido_paterno" class="input_frm"  type="text"  maxlength="30" name="padre_apellido_paterno" required>
 						<br	/>
-						<label class="label_frm" >Apellido materno del padre: </label>
+						<label class="label_frm" >* Apellido materno del padre: </label>
 						<input id="padre_apellido_materno" class="input_frm"  type="text"  maxlength="30" name="padre_apellido_materno" required >
 						<br />
-						<label class="label_frm" >Nombre(s) del padre: </label>
+						<label class="label_frm" >* Nombre(s) del padre: </label>
 						<input id="padre_nombre" class="input_frm"  type="text"  maxlength="30" name="padre_nombre" required style="width: 260px;">
 						<span class="espacio_horizontal_30px "></span>
 						<br />
@@ -368,13 +369,13 @@
 						<!-- DATOS DE LA MADRE---------------------------------------------------->
 						<label class="label_frm">Datos de la madre:  </label>
 						<br /><hr />
-						<label class="label_frm" >Apellido paterno de la madre: </label>
+						<label class="label_frm" >* Apellido paterno de la madre: </label>
 						<input id="madre_apellido_paterno" class="input_frm"  type="text"  maxlength="30" name="madre_apellido_paterno" required>
 						<br	/>
-						<label class="label_frm" >Apellido materno del padre: </label>
+						<label class="label_frm" >* Apellido materno del padre: </label>
 						<input id="madre_apellido_materno" class="input_frm"  type="text"  maxlength="30" name="madre_apellido_materno" required >
 						<br />
-						<label class="label_frm" >Nombre(s) de la madre: </label>
+						<label class="label_frm" >* Nombre(s) de la madre: </label>
 						<input id="madre_nombre" class="input_frm"  type="text"  maxlength="30" name="madre_nombre" required style="width: 260px;">
 						<span class="espacio_horizontal_30px "></span>
 						<br />
@@ -452,18 +453,18 @@
 
 			</div> <!-- div_login -->
 
-			
+
 
 		</div> <!-- div_contenedorPrincipal -->
-		
-		
+
+
 		<div id="div_pie_pagina">
 				<!-- html/div_pie_pagina.php -->
 		</div> <!-- div_pie_pagina -->
 
-		
-		
-		
+
+
+
 	</body>
 
 </html>
