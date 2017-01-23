@@ -4,6 +4,8 @@
 @import "fuentes/fonts.css";
 /*pag: ---------------------------------------------- */
 @import "pag/registrar_personal.css";
+@import "pag/consulta_alumno.css";
+
 
 	/*-------- Colores ---------
 	 * Verde		    : #7ea030;
@@ -212,9 +214,9 @@
 	padding:10px;
 }
 
-
-
-
+#div_frm_buscar {
+	padding-top: 1rem;
+}
 
 .label_frm {
 	color: #fff;
