@@ -62,10 +62,10 @@
                   <input id="apellido_paterno" class="input_frm"  type="text"  maxlength="30" name="apellido_paterno" required>
                   <input id="apellido_materno" class="input_frm"  type="text"  maxlength="30" name="apellido_materno" required>
                   <select id="id_cargo" class="input_frm" name="id_cargo" style="width: 150px;">
-                    <option value="2">Comandante</option>
-                    <option value="3">Docente</option>
-                    <option value="4">Coordinador</option>
-                    <option value="5">Secretaria</option>
+                    <option value="0">Comandante</option>
+                    <option value="1">Docente</option>
+                    <option value="2">Coordinador</option>
+                    <option value="3">Secretaria</option>
                   </select>
               </div>
             </div>

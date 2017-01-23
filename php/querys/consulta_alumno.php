@@ -41,8 +41,8 @@
 	    */
 	    if (isset($nombre)) {
 	    ?>
-			<h2 id="alumno_encontrado_h2">Datos generales del alumno</h2><hr>
-	      <div id="alumno_encontrado">
+			<h2 id="encontrado_h2">Datos generales del alumno</h2><hr>
+	      <div id="div_encontrado">
 					<div id="datos_personales">
 						<p class="dato_alumno_nombre"><?php echo $nombre . " " . $apellido_paterno . " " . $apellido_materno ?></p>
 						<p class="dato_alumno">Rango: <?php echo $rango ?></p>
@@ -56,13 +56,13 @@
 						<p class="dato_alumno">Celular: <?php echo $numero_celular ?></p>
 						<p class="dato_alumno">Email: <?php echo $email ?></p>
 					</div>
-					<div id="foto_alumno">
+					<div id="div_foto">
 						<img src="../../img/itcg_logo.jpg" >
 					</div>
 			</div>
 
 	    <?php } else { ?>
-					<div id="alumno_no_encontrado">
+					<div id="div_no_encontrado">
 						<h2>No se encontro al alumno</h2>
 					</div>
 	    <?php  }?>

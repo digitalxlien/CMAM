@@ -27,6 +27,7 @@ function precargarPagina(){
 
 	//Carga de formulario de login
 	$("#div_login").load("../div/div_login.php");
+
 }
 
 function setValue(id_elemento, nuevo_valor){
@@ -98,8 +99,16 @@ function generarCurp(apellido_paterno, apellido_materno, nombre, fecha_nacimient
 function consultaAlumno() {
 	//Obtiene el id del alumno y lo almacena en una variable
 	var id_alumno = document.getElementById("id_alumno").value;
-	//Llama al archivo consulta_alumnoB.php pasando como parametro el id del alumno
+	//Llama al archivo consulta_alumno.php pasando como parametro el id del alumno
 	$("#div_resultado").load("../../php/querys/consulta_alumno.php",{
 		'id_alumno': id_alumno
+	});
+}
+function consultaPersonal() {
+	//Obtiene el id del personal y lo almacena en una variable
+	var id_personal = document.getElementById("id_personal").value;
+	//Llama al archivo consulta_personal.php pasando como parametro el id del personal
+	$("#div_resultado").load("../../php/querys/consulta_personal.php",{
+		'id_personal': id_personal
 	});
 }

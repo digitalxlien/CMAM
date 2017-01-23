@@ -50,19 +50,10 @@
 				<div id="div_resultado">
 
 				</div>
-
-
-			</div> <!-- div_login -->
-
-
-
+			</div> <!-- div_cuerpo -->
 		</div> <!-- div_contenedorPrincipal -->
-
 		<div id="div_pie_pagina">
 			<!-- html/div_pie_pagina.php -->
 		</div> <!-- div_pie_pagina -->
-
-
 	</body>
-
 </html>
