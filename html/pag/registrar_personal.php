@@ -19,20 +19,20 @@
 	</head>
 
   <body onload="precargarPagina()">
-  
-  
-  	
+
+
+
 	<div id="div_cabecera">
 	<!-- ../div_cebecera.php -->
 	</div><!-- div_cabecera -->
-	
+
 	<div id="div_menu_navegacion">
 	<!-- ../div_menu_navegacion.php -->
 	</div> <!-- div_menu_navegacion -->
-  
+
     <div id="div_contenedor_principal" >
 
-     
+
 
       <div id="div_cuerpo">
         <!-- Lo escencial de la pagina: -->
@@ -45,7 +45,7 @@
           <form  class= "frm_registrar" method="post" action="../../php/querys/alta_personal.php" name="frm_registrar_alumno" >
             <div id="div_contenedor_formulario">
               <div  id="div_labels">
-                  <label class="label_frm">Numero de control: </label>
+                  <label class="label_frm">Número de control: </label>
                   <label class="label_frm">Nombre: </label>
 									<label class="label_frm">Contraseña: </label>
 									<label class="label_frm">Confirmar Contraseña: </label>
@@ -54,7 +54,7 @@
                   <label class="label_frm" >Cargo: </label>
               </div>
               <div id="div_boxes">
-                  <input id="id_personal" class="input_frm"  type="text"  maxlength="10" name="id_personal" style="width: 150px; required>
+                  <input id="id_personal" class="input_frm"  type="text"  maxlength="10" name="id_personal" style="width: 150px"; required>
                   <input id="nombre" class="input_frm"  type="text"  maxlength="30" name="nombre" required>
 									<input id="contrasena" class="input_frm"  type="password"  maxlength="30" name="contrasena" required>
 									<input id="confirmar_contrasena" class="input_frm"  type="password"  maxlength="30" name="confirmar_contrasena" required>
@@ -75,22 +75,17 @@
         </div> <!--div_frm_registrar-->
 
       	</div> <!-- div_cuerpo-->
-      		
+
 		</div> <!-- div_contenedorPrincipal -->
-		
-			
+
+
 		<div id="div_pie_pagina">
 				<!-- html/div_pie_pagina.php -->
 		</div> <!-- div_pie_pagina -->
 
-		
-		
-		
+
+
+
 	</body>
 
 </html>
-		
-		
-		
-		
-		
