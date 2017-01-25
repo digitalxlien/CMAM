@@ -121,7 +121,8 @@
 								document.getElementById('sexo').value,
 								'curp'
 							)"
-						>
+						><!-- El método que se ejecuta en onfocus puede llegar a ser molesto para el usuario al momento de regresar a la
+						 			caja de texto de la CURP-->
 						<br><br>
 
 						<!-- INFORMACIÓN DE CONTACTO ----------------------------------------------------->

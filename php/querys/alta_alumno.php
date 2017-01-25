@@ -17,6 +17,7 @@
 	$puntos_demerito  			= $_REQUEST['puntos_demerito'];
 	$fecha_ingreso    			= $_REQUEST['fecha_ingreso'];//La fecha debe estar en formato YYYY/MM/DD
 	$fecha_nacimiento 			= $_REQUEST['fecha_nacimiento'];//La fecha debe estar en formato YYYY/MM/DD
+	$curp										= mb_strtoupper($_REQUEST['curp'],'utf-8');
 	$calle 					  			= mb_strtoupper($_REQUEST['calle'],'utf-8');
 	$colonia 				  			= mb_strtoupper($_REQUEST['colonia'],'utf-8');
 	$ciudad 				  			= mb_strtoupper($_REQUEST['ciudad'],'utf-8');
@@ -76,6 +77,7 @@
 		`puntos_demerito`,
 		`fecha_ingreso`,
 		`fecha_nacimiento`,
+		`curp`,
 		`calle`,
 		`colonia`,
 		`ciudad`,
@@ -133,7 +135,8 @@
 		'$horas_arresto',
 		'$puntos_demerito',
 		'$fecha_ingreso',
-	  	'$fecha_nacimiento',
+	  '$fecha_nacimiento',
+		'$curp',
 		'$calle',
 		'$colonia',
 		'$ciudad',
@@ -180,13 +183,14 @@
 		'$madre_profesion'
 	) ";
 
-	
-	
-	
+
+
+
 	//Se ejecuta el query:
 	$resultado = mysqli_query($conexion, $query)
-	
+
 	//Si falla (or die), redirecciona a la pagina de fallo.
+<<<<<<< HEAD
 	or die (header('Location: ../../html/pag/registro_alumno_incorrecto.php'));
 		
 	//Si no falla, redirecciona a la pagina de registro correcto.
@@ -195,6 +199,16 @@
 	
 	
 	
+=======
+	or die (header('Location: ../../html/pag/alumno_registro_incorrecto.php'));
+
+	//Si no falla, redirecciona a la pagina de registro correcto.
+	header('Location: ../../html/pag/alumno_registro_correcto.php');
+
+
+
+
+>>>>>>> origin/master
 	/*Esta es una sentencia de prueba*/
 	/*$query2 =
 	"INSERT INTO `tbl_alumno`

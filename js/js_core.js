@@ -105,6 +105,7 @@ function consultaAlumno() {
 	});
 }
 
+<<<<<<< HEAD
 function consultaAlumnoArresto() {
 	//Obtiene el id del alumno y lo almacena en una variable
 	var id_alumno = document.getElementById("id_alumno").value;
@@ -116,11 +117,30 @@ function consultaAlumnoArresto() {
 
 
 
+=======
+function consultaAlumno() {
+	//Obtiene el id del alumno y lo almacena en una variable
+	var id_alumno = document.getElementById("id_alumno").value;
+	//Llama al archivo consulta_alumno.php pasando como parametro el id del alumno
+	$("#div_resultado").load("../../php/querys/consulta_alumno.php",{
+		'id_alumno': id_alumno
+	});
+}
+>>>>>>> origin/master
 function consultaPersonal() {
 	//Obtiene el id del personal y lo almacena en una variable
 	var id_personal = document.getElementById("id_personal").value;
 	//Llama al archivo consulta_personal.php pasando como parametro el id del personal
 	$("#div_resultado").load("../../php/querys/consulta_personal.php",{
 		'id_personal': id_personal
+	});
+}
+
+function modificaAlumno() {
+	//Obtiene el id del alumno y lo almacena en una variable
+	var id_alumno = document.getElementById("id_alumno").value;
+	//Llama al archivo consulta_alumno.php pasando como parametro el id del alumno
+	$("#div_resultado").load("../../php/querys/modifica_alumno.php",{
+		'id_alumno': id_alumno
 	});
 }
