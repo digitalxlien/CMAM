@@ -373,7 +373,7 @@
 						<label class="label_frm" >* Apellido paterno de la madre: </label>
 						<input id="madre_apellido_paterno" class="input_frm"  type="text"  maxlength="30" name="madre_apellido_paterno" required>
 						<br	/>
-						<label class="label_frm" >* Apellido materno del padre: </label>
+						<label class="label_frm" >* Apellido materno de la madre: </label>
 						<input id="madre_apellido_materno" class="input_frm"  type="text"  maxlength="30" name="madre_apellido_materno" required >
 						<br />
 						<label class="label_frm" >* Nombre(s) de la madre: </label>

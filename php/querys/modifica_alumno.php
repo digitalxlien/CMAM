@@ -87,13 +87,14 @@
 	    if (isset($nombre)) {
 	    ?>
 			<h2 id="encontrado_h2">Datos generales del alumno</h2><hr>
-      <form  method="post" action="../../php/querys/alta_alumno.php" name="frm_registrar_alumno">
+      <form  method="post" action="../../php/querys/modificacion_alumno.php" name="frm_registrar_alumno">
 
 
         <!-- DATOS DE NUEVO INGRESO ----------------------------------------------------->
-
         <label class="label_frm">Datos de nuevo ingreso: </label>
         <br /><hr />
+        <label class="label_frm">Número de control: </label>
+        <input name="id_alum" id="id_alum" type="text" class="input_frm" readonly="readonly" value="<?php echo $id_alumno ?>">
         <label class="label_frm">Nivel: </label>
         <select class="input_frm" name="nivel" id="nivel" style="width: 180px;">
           <option value="S">Secundaria</option>
@@ -141,7 +142,7 @@
         <?php
           $ArraySex = array('H' => 'HOMBRE','M' => 'MUJER');
           foreach( $ArraySex as $var => $x ): ?>
-          <option value="<?php echo $var ?>"<?php if(strcmp($var, $sexo)): ?> selected="selected"<?php endif; ?>><?php echo $x ?></option>
+          <option value="<?php echo $var ?>"<?php if($var == $sexo): ?> selected="selected"<?php endif; ?>><?php echo $x ?></option>
         <?php endforeach; ?>
         </select>
         <br />
@@ -183,7 +184,7 @@
           'YUCATÁN' => 'Yucatán', 'ZACATECAS' => 'Zacatecas');
 
           foreach( $ArrayEstado as $var => $x ): ?>
-          <option value="<?php echo $var ?>"<?php if(strcmp($var, $estado) == 0): ?> selected="selected"<?php endif; ?>><?php echo $x ?></option>
+          <option value="<?php echo $var ?>"<?php if($var == $estado): ?> selected="selected"<?php endif; ?>><?php echo $x ?></option>
         <?php endforeach; ?>
         </select>
         <br />
@@ -197,7 +198,7 @@
         <input class="input_frm"  type="text"  maxlength="15" name="numero_celular" value="<?php echo $numero_celular?>">
         <span class="espacio_horizontal_30px "></span>
         <label class="label_frm" >E-mail: </label>
-        <input class="input_frm"  type="email"  maxlength="40" value="@" name="email" style="width: 300px;" value="<?php echo $email?>">
+        <input class="input_frm"  type="email"  maxlength="40" name="email" style="width: 300px;" value="<?php echo $email?>">
         <br /><br />
 
 
@@ -234,9 +235,7 @@
             foreach( $ArrayTutor as $var => $x ): ?>
             <option value="<?php echo $var ?>"<?php if($var == $tutor): ?> selected="selected"<?php endif; ?>><?php echo $x ?></option>
           <?php endforeach; ?>
-          <option value="P">Padre</option>
-          <option value="M">Madre</option>
-          <option value="O">Otro</option>
+          <!-- Checar lo de tutor en altas -->
         </select>
         <br />
         <label class="label_frm">Foto: </label>
@@ -244,7 +243,7 @@
         <br />
         <label class="label_frm">Alergias (descripción): </label>
         <br />
-        <input class="input_frm"  type="text"  maxlength="25" rows="3" style="width: 500px; height: 60px" name="input_alergia">
+        <input class="input_frm"  type="text"  maxlength="25" rows="3" style="width: 500px; height: 60px" name="input_alergia" value="<?php echo $alergia?>">
         <!-- <input class="input_frm"  type="text" name="alergia" form="frm_registrar_alumno" rows="3"  maxlength="25"  style="width: 500px; height: 60px"> -->
         <br /><br />
 
@@ -257,40 +256,49 @@
 
         <label class="label_frm">Estatus: </label>
         <select class="input_frm" name="estatus" id="estatus" style="width: 200px;">
-          <option value="Activo">Activo</option>
-          <option value="Inactivo">Inactivo</option>
-          <option value="Baja temporal">Baja temporal</option>
-          <option value="Expulsado">Expulsado</option>
+          <?php
+            $ArrayEstatus = array('Activo' => 'Activo', 'Inactivo' => 'Inactivo', 'Baja temporal' => 'Baja temporal', 'Expulsado' => 'Expulsado');
+            foreach( $ArrayEstatus as $var => $x ): ?>
+            <option value="<?php echo $var ?>"<?php if($var == $estatus): ?> selected="selected"<?php endif; ?>><?php echo $x ?></option>
+          <?php endforeach; ?>
         </select>
         <span class="espacio_horizontal_30px "></span>
         <label class="label_frm">Rango: </label>
         <select class="input_frm" name="rango" id="rango" style="width: 170px;">
-          <option value="Cabo">Cabo</option>
-          <option value="Cadete 2do.">Cadete 2do.</option>
-          <option value="Cadete 1ro.">Cadete 1ro.</option>
-          <option value="Sargento 2do.">Sargento 2do.</option>
-          <option value="Sargento 1ro">Sargento 1ro.</option>
-          <option value="Comandate de unidad">Comandate de unidad</option>
-          <option value="Jefe de cadetes">Jefe de cadetes</option>
-          <option value="Sub-oficial">Sub-oficial</option>
-          <option value="Oficial 2do.">Oficial 2do.</option>
-          <option value="Oficial 1ro.">Oficial 1ro.</option>
-          <option value="Oficial">Oficial</option>
-          <option value="Sin rango">Sin grado</option>
+          <?php
+            $ArrayRango = array(  'Cabo' => 'Cabo',
+                                  'Cadete 2do.' => 'Cadete 2do.',
+                                  'Cadete 1ro.' => 'Cadete 1ro.',
+                                  'Sargento 2do.' => 'Sargento 2do.',
+                                  'Sargento 1ro.' => 'Sargento 1ro.',
+                                  'Comandate de unidad' => 'Comandate de unidad',
+                                  'Jefe de cadetes' => 'Jefe de cadetes',
+                                  'Sub-oficial' => 'Sub-oficial',
+                                  'Oficial 2do.' => 'Oficial 2do.',
+                                  'Oficial 1ro.' => 'Oficial 1ro.',
+                                  'Oficial' => 'Oficial',
+                                  'Sin rango' => 'Sin grado');
+            foreach( $ArrayRango as $var => $x ): ?>
+            <option value="<?php echo $var ?>"<?php if($var == $rango): ?> selected="selected"<?php endif; ?>><?php echo $x ?></option>
+          <?php endforeach; ?>
         </select>
         <span class="espacio_horizontal_30px "></span>
         <label class="label_frm">Modalidad: </label>
         <select class="input_frm" name="modalidad" id="modalidad" style="width: 170px;">
-          <option value="Interno">Interno</option>
-          <option value="Externo">Externo</option>
-          <option value="Semi-interno">Semi-interno</option>
+          <?php
+            $ArrayModa = array(  'Interno' => 'Interno',
+                                  'Externo' => 'Externo',
+                                  'Semi-interno' => 'Semi-interno');
+            foreach( $ArrayModa as $var => $x ): ?>
+            <option value="<?php echo $var ?>"<?php if($var == $modalidad): ?> selected="selected"<?php endif; ?>><?php echo $x ?></option>
+          <?php endforeach; ?>
         </select>
         <br />
         <label class="label_frm" >Horas de arresto: </label>
-        <input class="input_frm"  type="number" value="0" min="0" max="500" name="horas_arresto"  style="width: 70px;">
+        <input class="input_frm"  type="number" min="0" max="500" name="horas_arresto"  style="width: 70px;" value="<?php echo $horas_arresto?>">
         <span class="espacio_horizontal_30px "></span>
         <label class="label_frm" >Horas de demerito: </label>
-        <input class="input_frm"  type="number" value="0" min="0" max="500" name="puntos_demerito"  style="width: 70px;">
+        <input class="input_frm"  type="number" value="0" min="0" max="500" name="puntos_demerito"  style="width: 70px;" value="<?php echo $puntos_demerito?>">
         <span class="espacio_horizontal_30px "></span>
 
         <br />
@@ -298,7 +306,7 @@
         <label class="label_frm" >Fecha de ingreso: </label>
 
         <!-- Retorna una fecha con formta YYYY-MM-DD -->
-        <input id="fecha_ingreso" type="date" name="fecha_ingreso" min="2000-01-01" value="2010-01-01" class="input_frm">
+        <input id="fecha_ingreso" type="date" name="fecha_ingreso" min="2000-01-01" class="input_frm" value="<?php echo $fecha_ingreso?>">
 
 
         <!-- DATOS DEL PADRE---------------------------------------------------->
@@ -308,78 +316,50 @@
         <br /><hr />
 
         <label class="label_frm" >* Apellido paterno del padre: </label>
-        <input id="padre_apellido_paterno" class="input_frm"  type="text"  maxlength="30" name="padre_apellido_paterno" required>
+        <input id="padre_apellido_paterno" class="input_frm"  type="text"  maxlength="30" name="padre_apellido_paterno" value="<?php echo $padre_apellido_paterno?>" required>
         <br	/>
         <label class="label_frm" >* Apellido materno del padre: </label>
-        <input id="padre_apellido_materno" class="input_frm"  type="text"  maxlength="30" name="padre_apellido_materno" required >
+        <input id="padre_apellido_materno" class="input_frm"  type="text"  maxlength="30" name="padre_apellido_materno" required value="<?php echo $padre_apellido_materno?>">
         <br />
         <label class="label_frm" >* Nombre(s) del padre: </label>
-        <input id="padre_nombre" class="input_frm"  type="text"  maxlength="30" name="padre_nombre" required style="width: 260px;">
+        <input id="padre_nombre" class="input_frm"  type="text"  maxlength="30" name="padre_nombre" required style="width: 260px;" value="<?php echo $padre_nombre?>">
         <span class="espacio_horizontal_30px "></span>
         <br />
         <label class="label_frm" >Fecha de nacimiento del padre: </label>
         <!-- Retorna una fecha con formta YYYY-MM-DD -->
-        <input id="padre_fecha_nacimiento" type="date" name="padre_fecha_nacimiento" min="1940-01-01" value="2000-01-01" class="input_frm" required>
+        <input id="padre_fecha_nacimiento" type="date" name="padre_fecha_nacimiento" min="1940-01-01" value="2000-01-01" class="input_frm" required value="<?php echo $padre_fecha_nacimiento?>">
         <br>
         <label class="label_frm" >Calle: </label>
-        <input class="input_frm"  type="text"  maxlength="30" name="padre_calle" style="width: 350px;" >
+        <input class="input_frm"  type="text"  maxlength="30" name="padre_calle" style="width: 350px;" value="<?php echo $padre_calle?>">
         <span class="espacio_horizontal_30px "></span>
         <label class="label_frm" >Colonia: </label>
-        <input class="input_frm"  type="text"  maxlength="30" name="padre_colonia" style="width: 350px;" >
+        <input class="input_frm"  type="text"  maxlength="30" name="padre_colonia" style="width: 350px;" value="<?php echo $padre_colonia?>">
         <br />
         <label class="label_frm" >Ciudad: </label>
-        <input class="input_frm"  type="text"  maxlength="30" name="padre_ciudad">
+        <input class="input_frm"  type="text"  maxlength="30" name="padre_ciudad" value="<?php echo $padre_ciudad?>">
         <span class="espacio_horizontal_30px "></span>
         <label class="label_frm" >Estado: </label>
         <select id="estado" name="padre_estado" class="input_frm" >
-          <option value="Jalisco">Jalisco</option>
-          <option value="Aguascalientes">Aguascalientes</option>
-          <option value="Baja California">Baja California</option>
-          <option value="Baja California Sur">Baja California Sur</option>
-          <option value="Campeche">Campeche</option>
-          <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
-          <option value="Colima">Colima</option>
-          <option value="Chiapas">Chiapas</option>
-          <option value="Chihuahua">Chihuahua</option>
-          <option value="Distrito Federal">Distrito Federal</option>
-          <option value="Durango">Durango</option>
-          <option value="Guanajuato">Guanajuato</option>
-          <option value="Guerrero">Guerrero</option>
-          <option value="Hidalgo">Hidalgo</option>
-          <option value="México">México</option>
-          <option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
-          <option value="Morelos">Morelos</option>
-          <option value="Nayarit">Nayarit</option>
-          <option value="Nuevo León">Nuevo León</option>
-          <option value="Oaxaca">Oaxaca</option>
-          <option value="Puebla">Puebla</option>
-          <option value="Querétaro">Querétaro</option>
-          <option value="Quintana Roo">Quintana Roo</option>
-          <option value="San Luis Potosí">San Luis Potosí</option>
-          <option value="Sinaloa">Sinaloa</option>
-          <option value="Sonora">Sonora</option>
-          <option value="Tabasco">Tabasco</option>
-          <option value="Tamaulipas">Tamaulipas</option>
-          <option value="Tlaxcala">Tlaxcala</option>
-          <option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio de la Llave</option>
-          <option value="Yucatán">Yucatán</option>
-          <option value="Zacatecas">Zacatecas</option>
+          <?php
+            foreach( $ArrayEstado as $var => $x ): ?>
+            <option value="<?php echo $var ?>"<?php if($var == $padre_estado): ?> selected="selected"<?php endif; ?>><?php echo $x ?></option>
+          <?php endforeach; ?>
         </select>
         <br />
         <label class="label_frm" >Código postal: </label>
-        <input class="input_frm"  type="text"  maxlength="8" name="padre_codigo_postal">
+        <input class="input_frm"  type="text"  maxlength="8" name="padre_codigo_postal" value="<?php echo $padre_codigo_postal?>">
         <span class="espacio_horizontal_30px "></span>
         <label class="label_frm" >Número de teléfono: </label>
-        <input class="input_frm"  type="text"  maxlength="15" name="padre_numero_telefono">
+        <input class="input_frm"  type="text"  maxlength="15" name="padre_numero_telefono" value="<?php echo $padre_numero_telefono?>">
         <br />
         <label class="label_frm" >Número de celular: </label>
-        <input class="input_frm"  type="text"  maxlength="15" name="padre_numero_celular">
+        <input class="input_frm"  type="text"  maxlength="15" name="padre_numero_celular" value="<?php echo $padre_numero_celular?>">
         <span class="espacio_horizontal_30px "></span>
         <label class="label_frm" >E-mail: </label>
-        <input class="input_frm"  type="email"  maxlength="40" value="@" name="padre_email" style="width: 300px;"  >
+        <input class="input_frm"  type="email"  maxlength="40" name="padre_email" style="width: 300px;"  value="<?php echo $padre_email?>">
         <br />
         <label class="label_frm" >Profesion: </label>
-        <input class="input_frm"  type="text"  maxlength="15" name="padre_profesion">
+        <input class="input_frm"  type="text"  maxlength="15" name="padre_profesion" value="<?php echo $padre_profesion?>">
         <br /><br />
 
 
@@ -388,83 +368,55 @@
         <label class="label_frm">Datos de la madre:  </label>
         <br /><hr />
         <label class="label_frm" >* Apellido paterno de la madre: </label>
-        <input id="madre_apellido_paterno" class="input_frm"  type="text"  maxlength="30" name="madre_apellido_paterno" required>
+        <input id="madre_apellido_paterno" class="input_frm"  type="text"  maxlength="30" name="madre_apellido_paterno" required value="<?php echo $madre_apellido_paterno?>">
         <br	/>
-        <label class="label_frm" >* Apellido materno del padre: </label>
-        <input id="madre_apellido_materno" class="input_frm"  type="text"  maxlength="30" name="madre_apellido_materno" required >
+        <label class="label_frm" >* Apellido materno de la madre: </label>
+        <input id="madre_apellido_materno" class="input_frm"  type="text"  maxlength="30" name="madre_apellido_materno" required value="<?php echo $madre_apellido_materno?>">
         <br />
         <label class="label_frm" >* Nombre(s) de la madre: </label>
-        <input id="madre_nombre" class="input_frm"  type="text"  maxlength="30" name="madre_nombre" required style="width: 260px;">
+        <input id="madre_nombre" class="input_frm"  type="text"  maxlength="30" name="madre_nombre" required style="width: 260px;" value="<?php echo $madre_nombre?>">
         <span class="espacio_horizontal_30px "></span>
         <br />
         <label class="label_frm" >Fecha de nacimiento de la madre: </label>
         <!-- Retorna una fecha con formta YYYY-MM-DD -->
-        <input id="madre_fecha_nacimiento" type="date" name="madre_fecha_nacimiento" min="1940-01-01" value="2000-01-01" class="input_frm" required>
+        <input id="madre_fecha_nacimiento" type="date" name="madre_fecha_nacimiento" min="1940-01-01" value="<?php echo $madre_fecha_nacimiento?>" class="input_frm" required>
         <br>
         <label class="label_frm" >Calle: </label>
-        <input class="input_frm"  type="text"  maxlength="30" name="madre_calle" style="width: 350px;" >
+        <input class="input_frm"  type="text"  maxlength="30" name="madre_calle" style="width: 350px;" value="<?php echo $madre_calle?>">
         <span class="espacio_horizontal_30px "></span>
         <label class="label_frm" >Colonia: </label>
-        <input class="input_frm"  type="text"  maxlength="30" name="madre_colonia" style="width: 350px;" >
+        <input class="input_frm"  type="text"  maxlength="30" name="madre_colonia" style="width: 350px;" value="<?php echo $madre_colonia?>">
         <br />
         <label class="label_frm" >Ciudad: </label>
-        <input class="input_frm"  type="text"  maxlength="30" name="madre_ciudad">
+        <input class="input_frm"  type="text"  maxlength="30" name="madre_ciudad" value="<?php echo $madre_ciudad?>">
         <span class="espacio_horizontal_30px "></span>
         <label class="label_frm" >Estado: </label>
         <select id="estado" name="madre_estado" class="input_frm" >
-          <option value="Jalisco">Jalisco</option>
-          <option value="Aguascalientes">Aguascalientes</option>
-          <option value="Baja California">Baja California</option>
-          <option value="Baja California Sur">Baja California Sur</option>
-          <option value="Campeche">Campeche</option>
-          <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
-          <option value="Colima">Colima</option>
-          <option value="Chiapas">Chiapas</option>
-          <option value="Chihuahua">Chihuahua</option>
-          <option value="Distrito Federal">Distrito Federal</option>
-          <option value="Durango">Durango</option>
-          <option value="Guanajuato">Guanajuato</option>
-          <option value="Guerrero">Guerrero</option>
-          <option value="Hidalgo">Hidalgo</option>
-          <option value="México">México</option>
-          <option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
-          <option value="Morelos">Morelos</option>
-          <option value="Nayarit">Nayarit</option>
-          <option value="Nuevo León">Nuevo León</option>
-          <option value="Oaxaca">Oaxaca</option>
-          <option value="Puebla">Puebla</option>
-          <option value="Querétaro">Querétaro</option>
-          <option value="Quintana Roo">Quintana Roo</option>
-          <option value="San Luis Potosí">San Luis Potosí</option>
-          <option value="Sinaloa">Sinaloa</option>
-          <option value="Sonora">Sonora</option>
-          <option value="Tabasco">Tabasco</option>
-          <option value="Tamaulipas">Tamaulipas</option>
-          <option value="Tlaxcala">Tlaxcala</option>
-          <option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio de la Llave</option>
-          <option value="Yucatán">Yucatán</option>
-          <option value="Zacatecas">Zacatecas</option>
+          <?php
+            foreach( $ArrayEstado as $var => $x ): ?>
+            <option value="<?php echo $var ?>"<?php if($var == $madre_estado): ?> selected="selected"<?php endif; ?>><?php echo $x ?></option>
+          <?php endforeach; ?>
         </select>
         <br />
         <label class="label_frm" >Código postal: </label>
-        <input class="input_frm"  type="text"  maxlength="8" name="madre_codigo_postal">
+        <input class="input_frm"  type="text"  maxlength="8" name="madre_codigo_postal" value="<?php echo $madre_codigo_postal?>">
         <span class="espacio_horizontal_30px "></span>
         <label class="label_frm" >Número de teléfono: </label>
-        <input class="input_frm"  type="text"  maxlength="15" name="madre_numero_telefono">
+        <input class="input_frm"  type="text"  maxlength="15" name="madre_numero_telefono" value="<?php echo $madre_numero_telefono?>">
         <br />
         <label class="label_frm" >Número de celular: </label>
-        <input class="input_frm"  type="text"  maxlength="15" name="madre_numero_celular">
+        <input class="input_frm"  type="text"  maxlength="15" name="madre_numero_celular" value="<?php echo $madre_numero_celular?>">
         <span class="espacio_horizontal_30px "></span>
         <label class="label_frm" >E-mail: </label>
-        <input class="input_frm"  type="email"  maxlength="40" value="@" name="madre_email" style="width: 300px;"  >
+        <input class="input_frm"  type="email"  maxlength="40" name="madre_email" style="width: 300px;" value="<?php echo $madre_email?>">
         <br />
-        <label class="label_frm" >Profesion: </label>
-        <input class="input_frm"  type="text"  maxlength="15" name="madre_profesion">
+        <label class="label_frm" >Profesión: </label>
+        <input class="input_frm"  type="text"  maxlength="15" name="madre_profesion" value="<?php echo $madre_profesion?>">
         <br />
         <hr>
         <br />
         <br />
-        <input class="btn_frm_aceptar" type="submit" name="btn_login" value="Registrar" onclick="return validarPassword()">
+        <input class="btn_frm_aceptar" type="submit" name="btn_login" value="Modificar">
       </form>
 
 	    <?php } else { ?>
