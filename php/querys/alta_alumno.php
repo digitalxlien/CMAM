@@ -187,10 +187,10 @@
 	$resultado = mysqli_query($conexion, $query)
 	
 	//Si falla (or die), redirecciona a la pagina de fallo.
-	or die (header('Location: ../../html/pag/alumno_registro_incorrecto.php'));
+	or die (header('Location: ../../html/pag/registro_alumno_incorrecto.php'));
 		
 	//Si no falla, redirecciona a la pagina de registro correcto.
-	header('Location: ../../html/pag/alumno_registro_correcto.php');
+	header('Location: ../../html/pag/registro_alumno_correcto.php');
 	
 	
 	

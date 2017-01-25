@@ -37,7 +37,7 @@
 
 
 #div_cabecera_central {
-	position:absolute;
+	position: absolute;
 	margin: 0 auto;
     left: 0;
     right: 0;
@@ -282,4 +282,58 @@
 	border:0px solid red;
 	padding: 0px 16px 0px 16px;
 	border: 0px solid red;
+}
+
+
+
+
+.tbl_lista_azul_simple {
+	align-items: center;
+	border-collapse: collapse;
+	margin: 0 auto;
+	font-family: muli_regular;
+}
+
+.tbl_lista_azul_simple th {
+	text-align: center;
+	height: 30px;
+	background-color: #00548c;
+	border-spacing: 0;
+	color: #fff;
+	font-weight: 100;
+}
+
+.tbl_lista_azul_simple td {
+	text-align: center;
+	height: 30px;
+	background-color: #81BEF7;
+	border-spacing: 0;
+	color: #2e2e2e;
+}
+
+
+
+
+.tbl_lista_verde_simple {
+	align-items: center;
+	border-collapse: collapse;
+	margin: 0 auto;
+	font-family: muli_regular;
+}
+
+.tbl_lista_verde_simple th {
+	text-align: center;
+	height: 30px;
+	background-color: #7ea030;
+	border-spacing: 0;
+	color: #fff;
+	font-weight: 100;
+}
+
+.tbl_lista_verde_simple td {
+	text-align: center;
+	height: 30px;
+	background-color: #9FF781;
+	border-spacing: 0;
+	color: #2e2e2e;
 }

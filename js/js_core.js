@@ -104,6 +104,18 @@ function consultaAlumno() {
 		'id_alumno': id_alumno
 	});
 }
+
+function consultaAlumnoArresto() {
+	//Obtiene el id del alumno y lo almacena en una variable
+	var id_alumno = document.getElementById("id_alumno").value;
+	//Llama al archivo consulta_alumno.php pasando como parametro el id del alumno
+	$("#div_resultado").load("../../php/querys/consulta_alumno_arresto.php",{
+		'id_alumno': id_alumno
+	});
+}
+
+
+
 function consultaPersonal() {
 	//Obtiene el id del personal y lo almacena en una variable
 	var id_personal = document.getElementById("id_personal").value;
